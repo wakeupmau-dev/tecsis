@@ -1,0 +1,433 @@
+"use client";
+
+import { CircleArrowUp, Dot } from "lucide-react";
+import Grainient from "@/components/Grainient";
+import PixelSwap from "@/components/PixelSwap";
+import { content, type Content, type Locale } from "@/content";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type FormEvent,
+  type ReactNode,
+} from "react";
+
+export default function Landing() {
+  const [locale, setLocale] = useState<Locale>("en");
+  const [leadResult, setLeadResult] = useState<LeadResult | null>(null);
+  const text = content[locale];
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const email = String(new FormData(form).get("email") ?? "").trim();
+    if (!EMAIL_REGEX.test(email)) {
+      setLeadResult("invalid");
+      return;
+    }
+
+    setLeadResult(null);
+    const result = await submitLead(email, locale);
+    setLeadResult(result);
+    if (result === "sent") form.reset();
+  }
+
+  return (
+    <main className="min-h-screen flex justify-center bg-bg-light pt-5 pb-20">
+      <div className="w-full max-w-280 flex flex-col gap-y-5">
+        <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
+        <Hero>
+          <div className="flex flex-col justify-end gap-y-6">
+            <h1 className="text-[3rem] leading-12 text-balance capitalize">
+              {text.hero.title}
+            </h1>
+            <div
+              className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
+            >
+              <p>{"["}</p>
+              {text.hero.categories.map((el, index) => (
+                <p className="uppercase" key={el}>
+                  {index < text.hero.categories.length - 1 ? `${el},` : el}
+                </p>
+              ))}
+              <p>{"]"}</p>
+            </div>
+            <div className="flex gap-x-3">
+              <button className="h-12 px-6 rounded-full bg-black text-white">
+                {text.hero.primaryCta}
+              </button>
+              <button className="h-12 px-6 rounded-full bg-[#f3f4fa] text-black">
+                {text.hero.secondaryCta}
+              </button>
+            </div>
+          </div>
+        </Hero>
+        <Section
+          id="about"
+          title={text.about.title}
+          paragraphs={text.about.paragraphs}
+        />
+        <Services services={text.services} />
+        <Hero
+          id="contact"
+          className="py-25"
+          centered
+          height="auto"
+          position="right"
+        >
+          <div className="flex flex-col justify-start gap-y-10">
+            <h1 className="text-[2.4rem] leading-10 text-balance capitalize">
+              {text.contact.title}
+            </h1>
+            <form className="flex items-end gap-x-3" onSubmit={handleSubmit}>
+              <Input name="email" label={text.contact.emailLabel} type="email" />
+              <button
+                type="submit"
+                className="w-1/3 h-15 rounded-full bg-black text-white"
+              >
+                {text.contact.submit}
+              </button>
+            </form>
+            <p
+              aria-live="polite"
+              className={`min-h-6 px-6 text-[0.9rem] ${leadResult === "sent" ? "text-gray-800" : "text-red-600"}`}
+            >
+              {leadResult && text.contact.messages[leadResult]}
+            </p>
+          </div>
+        </Hero>
+      </div>
+    </main>
+  );
+}
+
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+type LeadResult = "sent" | "invalid" | "exists" | "limited" | "failed";
+
+async function submitLead(email: string, locale: Locale): Promise<LeadResult> {
+  try {
+    const res = await fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, locale }),
+    });
+    if (res.ok) return "sent";
+    if (res.status === 400) return "invalid";
+    if (res.status === 409) return "exists";
+    if (res.status === 429) return "limited";
+    return "failed";
+  } catch {
+    return "failed";
+  }
+}
+
+function Input({
+  name,
+  label,
+  type = "text",
+}: {
+  name: string;
+  label: string;
+  type?: string;
+}) {
+  return (
+    <div className="relative w-full flex flex-col gap-y-1">
+      <label
+        className="px-6 text-[0.9rem] capitalize font-medium text-[#323232]"
+        htmlFor={name}
+      >
+        {label}
+      </label>
+      <div className="flex items-end">
+        <input
+          id={name}
+          name={name}
+          className="w-full outline-0 h-15 px-5 bg-[#f3f4fa] rounded-full"
+          type={type}
+        />
+      </div>
+    </div>
+  );
+}
+
+type NavItem = "home" | "about" | "contact";
+
+const navItems: NavItem[] = ["home", "about", "contact"];
+
+function scrollToItem(item: NavItem) {
+  if (item === "home") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+  document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
+}
+
+function getActiveItem(): NavItem {
+  const atBottom =
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 2;
+  if (atBottom) return "contact";
+
+  const line = window.innerHeight / 3;
+  let current: NavItem = "home";
+  for (const item of navItems) {
+    const element = document.getElementById(item);
+    if (element && element.getBoundingClientRect().top <= line) current = item;
+  }
+  return current;
+}
+
+type TopbarProps = {
+  nav: Content["nav"];
+  locale: Locale;
+  onLocaleChange: (locale: Locale) => void;
+};
+
+function Topbar({ nav, locale, onLocaleChange }: TopbarProps) {
+  const [active, setActive] = useState<NavItem>("home");
+  const [inView, setInView] = useState(true);
+  const topbarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      setActive(getActiveItem());
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const topbar = topbarRef.current;
+    if (!topbar) return;
+
+    function handleIntersect([entry]: IntersectionObserverEntry[]) {
+      setInView(entry.isIntersecting);
+    }
+
+    const observer = new IntersectionObserver(handleIntersect);
+    observer.observe(topbar);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <div ref={topbarRef} className="w-full">
+        <TopbarContent
+          active={active}
+          nav={nav}
+          locale={locale}
+          onLocaleChange={onLocaleChange}
+        />
+      </div>
+      {!inView && (
+        <div className="fixed top-0 inset-x-0 z-50 flex justify-center py-3 bg-bg-light/70 backdrop-blur-2xl">
+          <div className="w-full max-w-280">
+            <TopbarContent
+              active={active}
+              nav={nav}
+              locale={locale}
+              onLocaleChange={onLocaleChange}
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+function TopbarContent({
+  active,
+  nav,
+  locale,
+  onLocaleChange,
+}: TopbarProps & { active: NavItem }) {
+  function handleLocaleClick() {
+    onLocaleChange(locale === "en" ? "es" : "en");
+  }
+
+  return (
+    <div className="flex justify-between items-center w-full">
+      <h1 className="text-[1.5rem]">Logo</h1>
+      <div className="flex gap-x-2 items-center">
+        {navItems.map((item) => (
+          <NavButton
+            key={item}
+            item={item}
+            label={nav[item]}
+            active={item === active}
+            onSelect={scrollToItem}
+          />
+        ))}
+        <button className="ml-4" onClick={handleLocaleClick}>
+          <span className={locale === "en" ? "" : "text-gray-500"}>En</span>
+          <span className="text-gray-500">/</span>
+          <span className={locale === "es" ? "" : "text-gray-500"}>Es</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function NavButton({
+  item,
+  label,
+  active,
+  onSelect,
+}: {
+  item: NavItem;
+  label: string;
+  active: boolean;
+  onSelect: (item: NavItem) => void;
+}) {
+  function handleClick() {
+    onSelect(item);
+  }
+
+  return (
+    <button className={active ? "" : "text-gray-500"} onClick={handleClick}>
+      {active ? `[ ${label} ]` : label}
+    </button>
+  );
+}
+
+function Hero({
+  id,
+  children,
+  position = "left",
+  height = "h-170",
+  centered = false,
+  className,
+}: {
+  id?: string;
+  children: ReactNode;
+  position?: "left" | "right";
+  height?: string;
+  centered?: boolean;
+  className?: string;
+}) {
+  const grid = centered ? "grid-cols-1 place-items-center" : "grid-cols-2";
+
+  return (
+    <div
+      id={id}
+      className={`${height} relative isolate overflow-hidden w-full grid ${grid} rounded-2xl p-10 ${className}`}
+    >
+      <div className="absolute inset-0 -z-10 opacity-50">
+        <Grainient
+          color1="#75aee6"
+          color2="#122991"
+          color3="#75aee6"
+          timeSpeed={0.25}
+          colorBalance={0}
+          warpStrength={1}
+          warpFrequency={5}
+          warpSpeed={2}
+          warpAmplitude={50}
+          blendAngle={0}
+          blendSoftness={0.05}
+          rotationAmount={500}
+          noiseScale={2}
+          grainAmount={0.1}
+          grainScale={2}
+          grainAnimated={false}
+          contrast={1.5}
+          gamma={1}
+          saturation={1}
+          centerX={0}
+          centerY={0}
+          zoom={0.9}
+        />
+      </div>
+      {!centered && position === "right" && <div></div>}
+      {children}
+      {!centered && position === "left" && <div></div>}
+    </div>
+  );
+}
+
+function Section({
+  id,
+  title,
+  paragraphs,
+}: {
+  id?: string;
+  title: string;
+  paragraphs: string[];
+}) {
+  return (
+    <div id={id} className="w-full">
+      {/* Title */}
+      <div className="w-full h-12 flex justify-between items-center px-3 border-t border-x rounded-t-2xl">
+        <h2 className="uppercase">{title}</h2>
+        <Dot className="w-6 h-6" />
+      </div>
+      {/* Title */}
+      <div className="w full grid grid-cols-2 py-10">
+        <div></div>
+        <div className="flex flex-col gap-y-5 text-[1.5rem] p-5">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className={index > 0 ? "text-gray-600" : ""}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full h-12 flex justify-end items-center px-3 border-b border-x rounded-b-2xl">
+        <Dot className="w-6 h-6" />
+      </div>
+    </div>
+  );
+}
+
+function Services({ services }: { services: Content["services"] }) {
+  return (
+    <div className="grid grid-cols-3 grid-rows-2 gap-5 rounded-2xl overflow-hidden">
+      {services.map((service) => (
+        <PixelSwap
+          key={service.id}
+          firstContent={
+            <div
+              key={service.id}
+              className="click-prompt h-full w-full flex flex-col items-center justify-center aspect-square  text-white bg-[#122991] p-10 gap-y-5"
+            >
+              <div className="flex flex-col gap-y-2 justify-center items-center">
+                <CircleArrowUp className="w-10 h-10" />
+                <h2 className="text-[1.8rem]">{service.section}</h2>
+              </div>
+              <p className="text-[0.9rem]">{service.description}</p>
+            </div>
+          }
+          secondContent={
+            <div
+              key={service.id}
+              className="found-message h-full w-full flex flex-col items-center justify-center bg-[#e7eaf4]  aspect-square p-10 gap-y-5"
+            >
+              <div className="flex flex-col gap-y-2 justify-center items-center">
+                <CircleArrowUp className="w-10 h-10" />
+                <h2 className="text-[1.8rem]">{service.section}</h2>
+              </div>
+              <p className="text-[0.9rem]">{service.description}</p>
+            </div>
+          }
+          aspectRatio="1"
+          pixelSize={64}
+          gap={0}
+          pixelRadius={0}
+          pixelSpin={0}
+          pixelScale={0.35}
+          duration={1400}
+          pixelDuration={450}
+          pattern="random"
+          randomness={0}
+          fade
+          trigger="hover"
+        />
+      ))}
+    </div>
+  );
+}
