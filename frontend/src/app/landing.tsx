@@ -6,6 +6,7 @@ import PixelSwap from "@/components/PixelSwap";
 import { Globe } from "@/components/ui/globe";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
 import {
   useEffect,
@@ -28,6 +29,7 @@ export default function Landing() {
       : leadResult
         ? "error"
         : null;
+  const submitted = submitStatus === "success";
   const submitColor =
     submitStatus === "error"
       ? "bg-red-500 text-white"
@@ -100,16 +102,31 @@ export default function Landing() {
             <h1 className="text-title text-balance capitalize">
               {text.contact.title}
             </h1>
-            <form className="flex items-end gap-x-3" onSubmit={handleSubmit}>
-              <Input
-                name="email"
-                label={text.contact.emailLabel}
-                type="email"
-              />
-              <button
+            <form className="flex items-end" onSubmit={handleSubmit}>
+              <motion.div
+                initial={false}
+                animate={
+                  submitted
+                    ? { width: "0%", paddingRight: 0, opacity: 0 }
+                    : { width: "66.6667%", paddingRight: 12, opacity: 1 }
+                }
+                transition={SUBMIT_TRANSITION}
+                inert={submitted}
+                className="shrink-0 overflow-hidden"
+              >
+                <Input
+                  name="email"
+                  label={text.contact.emailLabel}
+                  type="email"
+                />
+              </motion.div>
+              <motion.button
                 type="submit"
-                disabled={submitStatus === "loading"}
-                className={`${submitColor} w-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50`}
+                disabled={submitStatus === "loading" || submitted}
+                initial={false}
+                animate={{ width: submitted ? "100%" : "33.3333%" }}
+                transition={SUBMIT_TRANSITION}
+                className={`${submitColor} shrink-0 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
               >
                 {submitStatus === "loading" && (
                   <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
@@ -117,8 +134,8 @@ export default function Landing() {
                 {submitStatus === "success" && (
                   <CircleCheck className="w-4 h-4" />
                 )}
-                {text.contact.submit}
-              </button>
+                {submitted ? text.contact.submitted : text.contact.submit}
+              </motion.button>
             </form>
             <p
               aria-live="polite"
@@ -132,6 +149,8 @@ export default function Landing() {
     </main>
   );
 }
+
+const SUBMIT_TRANSITION = { duration: 0.6, ease: "easeInOut" } as const;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -166,7 +185,7 @@ function Input({
   return (
     <div className="relative w-full flex flex-col gap-y-1">
       <label
-        className="px-6 text-[0.9rem] capitalize font-medium text-[#323232]"
+        className="px-6 text-[0.9rem] capitalize font-medium text-[#323232] whitespace-nowrap"
         htmlFor={name}
       >
         {label}

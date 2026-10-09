@@ -61,6 +61,7 @@ const en = {
     title: "Ready to discuss your challenge?",
     emailLabel: "email",
     submit: "Submit",
+    submitted: "Sent",
     messages: {
       sent: "Thanks! Check your inbox for our products.",
       invalid: "That email doesn't look right.",
@@ -138,6 +139,7 @@ const es: Content = {
     title: "¿Listo para conversar sobre su desafío?",
     emailLabel: "correo electrónico",
     submit: "Enviar",
+    submitted: "Enviado",
     messages: {
       sent: "¡Gracias! Revise su correo para ver nuestros productos.",
       invalid: "Ese correo no parece válido.",
