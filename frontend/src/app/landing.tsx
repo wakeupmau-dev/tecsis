@@ -3,6 +3,7 @@
 import { CircleArrowUp, Dot } from "lucide-react";
 import Grainient from "@/components/Grainient";
 import PixelSwap from "@/components/PixelSwap";
+import { Globe } from "@/components/ui/globe";
 import { content, type Content, type Locale } from "@/content";
 import {
   useEffect,
@@ -13,7 +14,7 @@ import {
 } from "react";
 
 export default function Landing() {
-  const [locale, setLocale] = useState<Locale>("en");
+  const [locale, setLocale] = useState<Locale>("es");
   const [leadResult, setLeadResult] = useState<LeadResult | null>(null);
   const text = content[locale];
 
@@ -36,7 +37,7 @@ export default function Landing() {
     <main className="min-h-screen flex justify-center bg-bg-light pt-5 pb-20">
       <div className="w-full max-w-280 flex flex-col gap-y-5">
         <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
-        <Hero>
+        <Hero globe>
           <div className="flex flex-col justify-end gap-y-6">
             <h1 className="text-[3rem] leading-12 text-balance capitalize">
               {text.hero.title}
@@ -80,7 +81,11 @@ export default function Landing() {
               {text.contact.title}
             </h1>
             <form className="flex items-end gap-x-3" onSubmit={handleSubmit}>
-              <Input name="email" label={text.contact.emailLabel} type="email" />
+              <Input
+                name="email"
+                label={text.contact.emailLabel}
+                type="email"
+              />
               <button
                 type="submit"
                 className="w-1/3 h-15 rounded-full bg-black text-white"
@@ -100,7 +105,6 @@ export default function Landing() {
     </main>
   );
 }
-
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -300,6 +304,7 @@ function Hero({
   position = "left",
   height = "h-170",
   centered = false,
+  globe = false,
   className,
 }: {
   id?: string;
@@ -307,6 +312,7 @@ function Hero({
   position?: "left" | "right";
   height?: string;
   centered?: boolean;
+  globe?: boolean;
   className?: string;
 }) {
   const grid = centered ? "grid-cols-1 place-items-center" : "grid-cols-2";
@@ -342,6 +348,12 @@ function Hero({
           zoom={0.9}
         />
       </div>
+      {globe && (
+        <Globe
+          className="-z-10 mix-blend-overlay max-w-280 opacity-50"
+          speed={0.0005}
+        />
+      )}
       {!centered && position === "right" && <div></div>}
       {children}
       {!centered && position === "left" && <div></div>}

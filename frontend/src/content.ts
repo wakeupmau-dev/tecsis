@@ -80,7 +80,7 @@ const es: Content = {
     contact: "contacto",
   },
   hero: {
-    title: "Respaldamos la tecnología con la que la industria decide.",
+    title: "Respaldamos la tecnología que la industria usa para decidir.",
     categories: [
       "Control de procesos",
       "Control de calidad",
