@@ -4,6 +4,8 @@ import { CircleArrowUp, Dot } from "lucide-react";
 import Grainient from "@/components/Grainient";
 import PixelSwap from "@/components/PixelSwap";
 import { Globe } from "@/components/ui/globe";
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
 import { content, type Content, type Locale } from "@/content";
 import {
   useEffect,
@@ -54,7 +56,7 @@ export default function Landing() {
               <p>{"]"}</p>
             </div>
             <div className="flex gap-x-3">
-              <button className="h-12 px-6 rounded-full bg-black text-white">
+              <button className="h-12 px-6 rounded-full bg-[#122991] text-white">
                 {text.hero.primaryCta}
               </button>
               <button className="h-12 px-6 rounded-full bg-[#f3f4fa] text-black">
@@ -63,6 +65,7 @@ export default function Landing() {
             </div>
           </div>
         </Hero>
+        <Brands />
         <Section
           id="about"
           title={text.about.title}
@@ -298,6 +301,36 @@ function NavButton({
   );
 }
 
+const brands = [
+  { name: "Power Standards Lab", src: "/logos/logo_01.png" },
+  { name: "Moser-Glaser", src: "/logos/logo_02.jpg" },
+  { name: "Instron", src: "/logos/logo_03.png" },
+  { name: "Soft Noise", src: "/logos/logo_04.png" },
+  { name: "Thermo Scientific", src: "/logos/logo_05.png" },
+  { name: "Bruel & Kjaer", src: "/logos/logo_06.jpg" },
+  { name: "Hipotronics", src: "/logos/logo_08.png" },
+  { name: "xrf", src: "/logos/logo_09.png" },
+  { name: "Optica Italy", src: "/logos/logo_10.png" },
+  { name: "Refatek", src: "/logos/logo_11.png" },
+];
+
+function Brands() {
+  return (
+    <Marquee autoFill pauseOnHover gradient gradientColor="#F6F7FF" speed={40}>
+      {brands.map((brand) => (
+        <Image
+          key={brand.name}
+          src={brand.src}
+          alt={brand.name}
+          width={160}
+          height={80}
+          className="h-20 w-auto object-contain mx-8"
+        />
+      ))}
+    </Marquee>
+  );
+}
+
 function Hero({
   id,
   children,
@@ -322,7 +355,7 @@ function Hero({
       id={id}
       className={`${height} relative isolate overflow-hidden w-full grid ${grid} rounded-2xl p-10 ${className}`}
     >
-      <div className="absolute inset-0 -z-10 opacity-50">
+      <div className="absolute inset-0 -z-10 opacity-45">
         <Grainient
           color1="#75aee6"
           color2="#122991"
