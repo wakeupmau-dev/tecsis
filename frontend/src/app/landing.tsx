@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleArrowUp, Dot } from "lucide-react";
+import { CircleArrowUp, CircleCheck, Dot } from "lucide-react";
 import Grainient from "@/components/Grainient";
 import PixelSwap from "@/components/PixelSwap";
 import { Globe } from "@/components/ui/globe";
@@ -18,7 +18,22 @@ import {
 export default function Landing() {
   const [locale, setLocale] = useState<Locale>("es");
   const [leadResult, setLeadResult] = useState<LeadResult | null>(null);
+  const [submitting, setSubmitting] = useState(false);
   const text = content[locale];
+
+  const submitStatus = submitting
+    ? "loading"
+    : leadResult === "sent"
+      ? "success"
+      : leadResult
+        ? "error"
+        : null;
+  const submitColor =
+    submitStatus === "error"
+      ? "bg-red-500 text-white"
+      : submitStatus === "success"
+        ? "bg-green-600 text-white"
+        : "bg-black text-white";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,22 +45,24 @@ export default function Landing() {
     }
 
     setLeadResult(null);
+    setSubmitting(true);
     const result = await submitLead(email, locale);
+    setSubmitting(false);
     setLeadResult(result);
     if (result === "sent") form.reset();
   }
 
   return (
     <main className="min-h-screen flex justify-center bg-bg-light pt-5 pb-20">
-      <div className="w-full max-w-280 flex flex-col gap-y-5">
+      <div className="w-full max-w-280 flex flex-col gap-y-5 sm:px-5 min-[70rem]:px-0">
         <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
         <Hero globe>
           <div className="flex flex-col justify-end gap-y-6">
-            <h1 className="text-[3rem] leading-12 text-balance capitalize">
+            <h1 className="text-display text-balance capitalize">
               {text.hero.title}
             </h1>
             <div
-              className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
+              className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.65rem] sm:text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
             >
               <p>{"["}</p>
               {text.hero.categories.map((el, index) => (
@@ -80,7 +97,7 @@ export default function Landing() {
           position="right"
         >
           <div className="flex flex-col justify-start gap-y-10">
-            <h1 className="text-[2.4rem] leading-10 text-balance capitalize">
+            <h1 className="text-title text-balance capitalize">
               {text.contact.title}
             </h1>
             <form className="flex items-end gap-x-3" onSubmit={handleSubmit}>
@@ -91,8 +108,15 @@ export default function Landing() {
               />
               <button
                 type="submit"
-                className="w-1/3 h-15 rounded-full bg-black text-white"
+                disabled={submitStatus === "loading"}
+                className={`${submitColor} w-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50`}
               >
+                {submitStatus === "loading" && (
+                  <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
+                )}
+                {submitStatus === "success" && (
+                  <CircleCheck className="w-4 h-4" />
+                )}
                 {text.contact.submit}
               </button>
             </form>
@@ -222,7 +246,7 @@ function Topbar({ nav, locale, onLocaleChange }: TopbarProps) {
 
   return (
     <>
-      <div ref={topbarRef} className="w-full">
+      <div ref={topbarRef} className="hidden sm:block w-full">
         <TopbarContent
           active={active}
           nav={nav}
@@ -231,8 +255,8 @@ function Topbar({ nav, locale, onLocaleChange }: TopbarProps) {
         />
       </div>
       {!inView && (
-        <div className="fixed top-0 inset-x-0 z-50 flex justify-center py-3 bg-bg-light/70 backdrop-blur-2xl">
-          <div className="w-full max-w-280">
+        <div className="fixed top-0 inset-x-0 z-50 flex justify-center py-3 bg-bg-light">
+          <div className="w-full max-w-280 px-2 md:px-0">
             <TopbarContent
               active={active}
               nav={nav}
@@ -258,17 +282,28 @@ function TopbarContent({
 
   return (
     <div className="flex justify-between items-center w-full">
-      <h1 className="text-[1.5rem]">Logo</h1>
+      <h1>
+        <Image
+          src="/tecsis-logo.jpg"
+          alt="Tecsis"
+          width={300}
+          height={51}
+          priority
+          className="h-7 w-auto mix-blend-multiply"
+        />
+      </h1>
       <div className="flex gap-x-2 items-center">
-        {navItems.map((item) => (
-          <NavButton
-            key={item}
-            item={item}
-            label={nav[item]}
-            active={item === active}
-            onSelect={scrollToItem}
-          />
-        ))}
+        <div className="hidden md:flex gap-x-2 items-center">
+          {navItems.map((item) => (
+            <NavButton
+              key={item}
+              item={item}
+              label={nav[item]}
+              active={item === active}
+              onSelect={scrollToItem}
+            />
+          ))}
+        </div>
         <button className="ml-4" onClick={handleLocaleClick}>
           <span className={locale === "en" ? "" : "text-gray-500"}>En</span>
           <span className="text-gray-500">/</span>
@@ -316,18 +351,26 @@ const brands = [
 
 function Brands() {
   return (
-    <Marquee autoFill pauseOnHover gradient gradientColor="#F6F7FF" speed={40}>
-      {brands.map((brand) => (
-        <Image
-          key={brand.name}
-          src={brand.src}
-          alt={brand.name}
-          width={160}
-          height={80}
-          className="h-20 w-auto object-contain mx-8"
-        />
-      ))}
-    </Marquee>
+    <div className="sm:-mx-5 min-[70rem]:mx-0">
+      <Marquee
+        autoFill
+        pauseOnHover
+        gradient
+        gradientColor="#F6F7FF"
+        speed={40}
+      >
+        {brands.map((brand) => (
+          <Image
+            key={brand.name}
+            src={brand.src}
+            alt={brand.name}
+            width={160}
+            height={80}
+            className="h-20 w-auto object-contain mx-8"
+          />
+        ))}
+      </Marquee>
+    </div>
   );
 }
 
@@ -348,12 +391,14 @@ function Hero({
   globe?: boolean;
   className?: string;
 }) {
-  const grid = centered ? "grid-cols-1 place-items-center" : "grid-cols-2";
+  const grid = centered
+    ? "grid-cols-1 place-items-center"
+    : "grid-cols-1 md:grid-cols-2";
 
   return (
     <div
       id={id}
-      className={`${height} relative isolate overflow-hidden w-full grid ${grid} rounded-2xl p-10 ${className}`}
+      className={`${height} relative isolate overflow-hidden w-full grid ${grid} sm:rounded-2xl p-10 ${className}`}
     >
       <div className="absolute inset-0 -z-10 opacity-45">
         <Grainient
@@ -383,13 +428,17 @@ function Hero({
       </div>
       {globe && (
         <Globe
-          className="-z-10 mix-blend-overlay max-w-280 opacity-50"
+          className="-z-10 mix-blend-overlay opacity-50 w-280 max-w-none left-1/2 right-auto mx-0 -translate-x-1/2"
           speed={0.0005}
         />
       )}
-      {!centered && position === "right" && <div></div>}
+      {!centered && position === "right" && (
+        <div className="hidden md:block"></div>
+      )}
       {children}
-      {!centered && position === "left" && <div></div>}
+      {!centered && position === "left" && (
+        <div className="hidden md:block"></div>
+      )}
     </div>
   );
 }
@@ -406,14 +455,14 @@ function Section({
   return (
     <div id={id} className="w-full">
       {/* Title */}
-      <div className="w-full h-12 flex justify-between items-center px-3 border-t border-x rounded-t-2xl">
+      <div className="w-full h-12 flex justify-between items-center px-3 border-t border-x sm:rounded-t-2xl">
         <h2 className="uppercase">{title}</h2>
         <Dot className="w-6 h-6" />
       </div>
       {/* Title */}
-      <div className="w full grid grid-cols-2 py-10">
-        <div></div>
-        <div className="flex flex-col gap-y-5 text-[1.5rem] p-5">
+      <div className="w full grid grid-cols-1 md:grid-cols-2 py-10">
+        <div className="hidden md:block"></div>
+        <div className="flex flex-col gap-y-5 text-body-lg p-5">
           {paragraphs.map((paragraph, index) => (
             <p key={index} className={index > 0 ? "text-gray-600" : ""}>
               {paragraph}
@@ -422,7 +471,7 @@ function Section({
         </div>
       </div>
 
-      <div className="w-full h-12 flex justify-end items-center px-3 border-b border-x rounded-b-2xl">
+      <div className="w-full h-12 flex justify-end items-center px-3 border-b border-x sm:rounded-b-2xl">
         <Dot className="w-6 h-6" />
       </div>
     </div>
@@ -431,7 +480,7 @@ function Section({
 
 function Services({ services }: { services: Content["services"] }) {
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-5 rounded-2xl overflow-hidden">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-5 sm:rounded-2xl overflow-hidden">
       {services.map((service) => (
         <PixelSwap
           key={service.id}
@@ -442,7 +491,7 @@ function Services({ services }: { services: Content["services"] }) {
             >
               <div className="flex flex-col gap-y-2 justify-center items-center">
                 <CircleArrowUp className="w-10 h-10" />
-                <h2 className="text-[1.8rem]">{service.section}</h2>
+                <h2 className="text-card">{service.section}</h2>
               </div>
               <p className="text-[0.9rem]">{service.description}</p>
             </div>
@@ -454,7 +503,7 @@ function Services({ services }: { services: Content["services"] }) {
             >
               <div className="flex flex-col gap-y-2 justify-center items-center">
                 <CircleArrowUp className="w-10 h-10" />
-                <h2 className="text-[1.8rem]">{service.section}</h2>
+                <h2 className="text-card">{service.section}</h2>
               </div>
               <p className="text-[0.9rem]">{service.description}</p>
             </div>
