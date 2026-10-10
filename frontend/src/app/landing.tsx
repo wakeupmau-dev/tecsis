@@ -462,7 +462,7 @@ function Hero({
       </div>
       {globe && (
         <Globe
-          className="-z-10 mix-blend-overlay opacity-50 w-280 max-w-none left-1/2 right-auto mx-0 -translate-x-1/2"
+          className="-z-10 mix-blend-overlay opacity-50 w-[150vw] md:w-280 max-w-none left-1/2 right-auto mx-0 -translate-x-1/2"
           speed={0.0005}
         />
       )}

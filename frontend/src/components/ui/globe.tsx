@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import createGlobe, { type COBEOptions } from "cobe"
 import { useMotionValue, useSpring } from "motion/react"
 
@@ -50,6 +50,8 @@ export function Globe({
   const widthRef = useRef(0)
   const pointerInteracting = useRef<number | null>(null)
   const pointerInteractionMovement = useRef(0)
+  // Bumped when the browser restores a lost WebGL context, so the effect rebuilds.
+  const [generation, setGeneration] = useState(0)
 
   const r = useMotionValue(0)
   const rs = useSpring(r, {
@@ -95,12 +97,21 @@ export function Globe({
       },
     })
 
+    // preventDefault on loss is what allows the browser to restore the context.
+    const canvas = canvasRef.current!
+    const onContextLost = (e: Event) => e.preventDefault()
+    const onContextRestored = () => setGeneration((g) => g + 1)
+    canvas.addEventListener("webglcontextlost", onContextLost)
+    canvas.addEventListener("webglcontextrestored", onContextRestored)
+
     setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0)
     return () => {
       globe.destroy()
       window.removeEventListener("resize", onResize)
+      canvas.removeEventListener("webglcontextlost", onContextLost)
+      canvas.removeEventListener("webglcontextrestored", onContextRestored)
     }
-  }, [rs, config, speed])
+  }, [rs, config, speed, generation])
 
   return (
     <div

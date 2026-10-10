@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 import './Grainient.css';
 
@@ -173,6 +173,8 @@ const Grainient: React.FC<GrainientProps> = ({
   className = ''
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  // Bumped when the browser restores a lost WebGL context, so Effect 1 rebuilds.
+  const [generation, setGeneration] = useState(0);
 
   // Effect 1: build WebGL context once, pause when offscreen / tab hidden
   useEffect(() => {
@@ -183,7 +185,12 @@ const Grainient: React.FC<GrainientProps> = ({
       webgl: 2,
       alpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2)
+      // Full density only from md up: on phones the GPU memory matters more
+      // than sharpness, and a soft grainy gradient hides the difference.
+      dpr: Math.min(
+        window.devicePixelRatio || 1,
+        window.matchMedia('(min-width: 768px)').matches ? 2 : 1
+      )
     });
 
     const gl = renderer.gl;
@@ -273,6 +280,15 @@ const Grainient: React.FC<GrainientProps> = ({
     };
     document.addEventListener('visibilitychange', onVisibility);
 
+    // preventDefault on loss is what allows the browser to restore the context.
+    const onContextLost = (e: Event) => {
+      e.preventDefault();
+      tryStop();
+    };
+    const onContextRestored = () => setGeneration(g => g + 1);
+    canvas.addEventListener('webglcontextlost', onContextLost);
+    canvas.addEventListener('webglcontextrestored', onContextRestored);
+
     tryStart();
 
     return () => {
@@ -280,10 +296,12 @@ const Grainient: React.FC<GrainientProps> = ({
       ro.disconnect();
       io.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
+      canvas.removeEventListener('webglcontextlost', onContextLost);
+      canvas.removeEventListener('webglcontextrestored', onContextRestored);
       ctxMap.delete(container);
       try { container.removeChild(canvas); } catch { /* ignore */ }
     };
-  }, []); // renderer created once
+  }, [generation]); // rebuilt only after a context restore
 
   // Effect 2: sync props to uniforms — zero GPU cost, no teardown
   useEffect(() => {
@@ -320,7 +338,7 @@ const Grainient: React.FC<GrainientProps> = ({
     timeSpeed, colorBalance, warpStrength, warpFrequency, warpSpeed,
     warpAmplitude, blendAngle, blendSoftness, rotationAmount, noiseScale,
     grainAmount, grainScale, grainAnimated, contrast, gamma, saturation,
-    centerX, centerY, zoom, color1, color2, color3, lightMode
+    centerX, centerY, zoom, color1, color2, color3, lightMode, generation
   ]);
 
 
