@@ -64,6 +64,8 @@ const en = {
     submitted: "Sent",
     messages: {
       sent: "Thanks! Check your inbox for our products.",
+      notSent:
+        "We saved your email, but couldn't send the link. Try again in a moment.",
       invalid: "That email doesn't look right.",
       exists: "That email is already registered.",
       limited: "Too many attempts. Try again later.",
@@ -142,6 +144,8 @@ const es: Content = {
     submitted: "Enviado",
     messages: {
       sent: "¡Gracias! Revise su correo para ver nuestros productos.",
+      notSent:
+        "Guardamos su correo, pero no pudimos enviar el enlace. Inténtelo de nuevo en un momento.",
       invalid: "Ese correo no parece válido.",
       exists: "Ese correo ya está registrado.",
       limited: "Demasiados intentos. Inténtelo más tarde.",

@@ -1,6 +1,6 @@
 "use client";
 
-import { CircleArrowUp, CircleCheck, Dot } from "lucide-react";
+import { CircleArrowUp, CircleCheck, Dot, Send } from "lucide-react";
 import Grainient from "@/components/Grainient";
 import PixelSwap from "@/components/PixelSwap";
 import { Globe } from "@/components/ui/globe";
@@ -107,12 +107,12 @@ export default function Landing() {
                 initial={false}
                 animate={
                   submitted
-                    ? { width: "0%", paddingRight: 0, opacity: 0 }
-                    : { width: "66.6667%", paddingRight: 12, opacity: 1 }
+                    ? { flexGrow: 0, paddingRight: 0, opacity: 0 }
+                    : { flexGrow: 1, paddingRight: 12, opacity: 1 }
                 }
                 transition={SUBMIT_TRANSITION}
                 inert={submitted}
-                className="shrink-0 overflow-hidden"
+                className="basis-0 min-w-0 overflow-hidden"
               >
                 <Input
                   name="email"
@@ -124,9 +124,10 @@ export default function Landing() {
                 type="submit"
                 disabled={submitStatus === "loading" || submitted}
                 initial={false}
-                animate={{ width: submitted ? "100%" : "33.3333%" }}
+                animate={{ flexGrow: submitted ? 1 : 0 }}
                 transition={SUBMIT_TRANSITION}
-                className={`${submitColor} shrink-0 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
+                aria-label={submitted ? text.contact.submitted : text.contact.submit}
+                className={`${submitColor} shrink-0 basis-15 sm:basis-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
               >
                 {submitStatus === "loading" && (
                   <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
@@ -134,7 +135,12 @@ export default function Landing() {
                 {submitStatus === "success" && (
                   <CircleCheck className="w-4 h-4" />
                 )}
-                {submitted ? text.contact.submitted : text.contact.submit}
+                {submitStatus !== "loading" && !submitted && (
+                  <Send className="w-5 h-5 sm:hidden" />
+                )}
+                <span className={submitted ? "" : "hidden sm:inline"}>
+                  {submitted ? text.contact.submitted : text.contact.submit}
+                </span>
               </motion.button>
             </form>
             <p
@@ -154,7 +160,13 @@ const SUBMIT_TRANSITION = { duration: 0.6, ease: "easeInOut" } as const;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-type LeadResult = "sent" | "invalid" | "exists" | "limited" | "failed";
+type LeadResult =
+  | "sent"
+  | "notSent"
+  | "invalid"
+  | "exists"
+  | "limited"
+  | "failed";
 
 async function submitLead(email: string, locale: Locale): Promise<LeadResult> {
   try {
@@ -163,7 +175,10 @@ async function submitLead(email: string, locale: Locale): Promise<LeadResult> {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, locale }),
     });
-    if (res.ok) return "sent";
+    if (res.ok) {
+      const body: { emailSent?: boolean } = await res.json();
+      return body.emailSent ? "sent" : "notSent";
+    }
     if (res.status === 400) return "invalid";
     if (res.status === 409) return "exists";
     if (res.status === 429) return "limited";
