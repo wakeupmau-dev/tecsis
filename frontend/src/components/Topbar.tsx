@@ -1,5 +1,6 @@
 "use client";
 
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -124,18 +125,19 @@ function TopbarContent({
       </h1>
       <div className="flex gap-x-2 items-center">
         {nav && (
-          <div className="hidden md:flex gap-x-2 items-center">
+          <div className="hidden md:flex gap-x-4 items-center">
             {navItems.map((item) => (
-              <NavButton
+              <NavEntry
                 key={item}
                 item={item}
-                label={nav[item]}
+                nav={nav}
                 active={item === active}
                 onSelect={scrollToItem}
               />
             ))}
           </div>
         )}
+        {nav && <MobileMenu nav={nav} active={active} />}
         <button
           className="ml-4 h-8 px-3 border border-[#c9c9cf] rounded-md"
           onClick={handleLocaleClick}
@@ -148,23 +150,109 @@ function TopbarContent({
   );
 }
 
+// Below md the section buttons are hidden; this button opens the same
+// choices in a floating menu.
+function MobileMenu({
+  nav,
+  active,
+}: {
+  nav: Content["nav"];
+  active: NavItem;
+}) {
+  const [open, setOpen] = useState(false);
+
+  function toggle() {
+    setOpen(!open);
+  }
+
+  function handleSelect(item: NavItem) {
+    setOpen(false);
+    scrollToItem(item);
+  }
+
+  return (
+    <div className="relative md:hidden">
+      <button
+        className="h-8 w-8 flex items-center justify-center"
+        onClick={toggle}
+        aria-label={nav.menu}
+        aria-expanded={open}
+      >
+        <Menu className="size-6" />
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-2 z-50 flex flex-col min-w-44 bg-white rounded-xl shadow-xl">
+          {navItems.map((item) => (
+            <NavEntry
+              key={item}
+              item={item}
+              nav={nav}
+              active={item === active}
+              onSelect={handleSelect}
+              className="h-12 px-5 flex items-center justify-start text-[1.1rem]"
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// A section button, followed by the products link right after "home". The
+// link goes to another page, so it never shows as active here.
+function NavEntry({
+  item,
+  nav,
+  active,
+  onSelect,
+  className = "",
+}: {
+  item: NavItem;
+  nav: Content["nav"];
+  active: boolean;
+  onSelect: (item: NavItem) => void;
+  className?: string;
+}) {
+  return (
+    <>
+      <NavButton
+        item={item}
+        label={nav[item]}
+        active={active}
+        onSelect={onSelect}
+        className={className}
+      />
+      {item === "home" && (
+        <Link href="/products" className={`text-gray-500 ${className}`}>
+          {nav.products}
+        </Link>
+      )}
+    </>
+  );
+}
+
 function NavButton({
   item,
   label,
   active,
   onSelect,
+  className = "",
 }: {
   item: NavItem;
   label: string;
   active: boolean;
   onSelect: (item: NavItem) => void;
+  className?: string;
 }) {
   function handleClick() {
     onSelect(item);
   }
 
   return (
-    <button className={active ? "" : "text-gray-500"} onClick={handleClick}>
+    <button
+      className={`${active ? "" : "text-gray-500"} ${className}`}
+      onClick={handleClick}
+    >
       {active ? `[ ${label} ]` : label}
     </button>
   );

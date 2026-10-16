@@ -3,8 +3,10 @@ export type Locale = "en" | "es";
 const en = {
   nav: {
     home: "home",
+    products: "products",
     about: "about",
     contact: "contact",
+    menu: "Menu",
   },
   hero: {
     title: "We stand behind the technology the industry measures with.",
@@ -90,8 +92,10 @@ export type Content = typeof en;
 const es: Content = {
   nav: {
     home: "inicio",
+    products: "productos",
     about: "nosotros",
     contact: "contacto",
+    menu: "Menú",
   },
   hero: {
     title: "Respaldamos la tecnología que la industria usa para decidir.",
