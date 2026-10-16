@@ -111,7 +111,7 @@ function TopbarContent({
   return (
     <div className="flex justify-between items-center w-full">
       <h1>
-        <Link href="/" aria-label="Tecsis">
+        <Link href="/landing" aria-label="Tecsis">
           <Image
             src={tecsisLogo.url}
             alt="Tecsis"
