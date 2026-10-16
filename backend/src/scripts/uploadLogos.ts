@@ -7,7 +7,7 @@ const OUTPUT = join(import.meta.dirname, "../../../frontend/src/data/logos.json"
 
 // File → brand slug for the public id. The file names do not say the brand
 // reliably ("5.jpg" is PRIDE), so the mapping is explicit. "Logo TECSIS
-// ALTA.png" is Tecsis's own logo and is left out on purpose.
+// ALTA.png" is Tecsis's own logo: uploaded separately below, not a carousel item.
 const LOGOS: Record<string, string> = {
   "2019_BK_logo_HBK_tagline_RGB.JPG": "bruel-kjaer",
   "5.jpg": "pride",
@@ -32,9 +32,13 @@ const LOGOS: Record<string, string> = {
 const TOLERANCE: Record<string, number> = { "thermo-scientific": 25 };
 const DEFAULT_TOLERANCE = 10;
 
-const logos: { id: string; url: string }[] = [];
+const TECSIS_LOGO = { file: "Logo TECSIS ALTA.png", slug: "tecsis" };
+const TECSIS_OUTPUT = join(
+  import.meta.dirname,
+  "../../../frontend/src/data/tecsis-logo.json",
+);
 
-for (const [file, slug] of Object.entries(LOGOS)) {
+async function uploadLogo(file: string, slug: string) {
   const result = await cloudinary.uploader.upload(join(ROOT, file), {
     public_id: `logos/${slug}`,
     resource_type: "image",
@@ -59,9 +63,18 @@ for (const [file, slug] of Object.entries(LOGOS)) {
     ],
     urlAnalytics: false,
   });
-  logos.push({ id: result.public_id, url });
   console.log(`${result.public_id.padEnd(24)} ${url}`);
+  return { id: result.public_id, url };
 }
 
+const logos: { id: string; url: string }[] = [];
+for (const [file, slug] of Object.entries(LOGOS)) {
+  logos.push(await uploadLogo(file, slug));
+}
 writeFileSync(OUTPUT, `${JSON.stringify(logos, null, 2)}\n`);
 console.log(`\n${logos.length} logos → frontend/src/data/logos.json`);
+
+// Tecsis's own logo, for the topbar: same treatment, kept out of the carousel.
+const tecsis = await uploadLogo(TECSIS_LOGO.file, TECSIS_LOGO.slug);
+writeFileSync(TECSIS_OUTPUT, `${JSON.stringify(tecsis, null, 2)}\n`);
+console.log("Tecsis logo → frontend/src/data/tecsis-logo.json");

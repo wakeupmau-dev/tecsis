@@ -9,6 +9,7 @@ import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
 import logos from "@/data/logos.json";
+import tecsisLogo from "@/data/tecsis-logo.json";
 import {
   useEffect,
   useRef,
@@ -319,12 +320,13 @@ function TopbarContent({
     <div className="flex justify-between items-center w-full">
       <h1>
         <Image
-          src="/tecsis-logo.jpg"
+          src={tecsisLogo.url}
           alt="Tecsis"
-          width={300}
-          height={51}
+          width={949}
+          height={160}
           priority
-          className="h-7 w-auto mix-blend-multiply"
+          unoptimized
+          className="h-7 w-auto"
         />
       </h1>
       <div className="flex gap-x-2 items-center">
