@@ -9,6 +9,9 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
   title: "tecsis",
+  icons: {
+    icon: "https://res.cloudinary.com/maulight/image/upload/c_fill,h_64,w_64/f_png/v1792126531/site/favicon",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

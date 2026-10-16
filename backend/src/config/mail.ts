@@ -14,5 +14,5 @@ export function replyTo() {
 }
 
 export function productsUrl() {
-  return process.env.PRODUCTS_URL ?? "https://example.com/products";
+  return process.env.PRODUCTS_URL ?? "https://tecsis.online/products";
 }
