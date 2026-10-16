@@ -11,7 +11,7 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsTopbar />
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {brands.map((brand) => (
           <BrandCard key={brand.brand} brand={brand} />
         ))}

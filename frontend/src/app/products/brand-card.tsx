@@ -7,7 +7,7 @@ type Brand = (typeof brands)[number];
 export default function BrandCard({ brand }: { brand: Brand }) {
   return (
     <Link href={`/products/${brand.slug}`}>
-      <article className="aspect-square flex flex-col border sm:rounded-2xl overflow-hidden">
+      <article className="aspect-square flex flex-col border border-[#c9c9cf] shadow-xl shadow-[#e9e9ef] sm:rounded-2xl overflow-hidden">
         <div className="grow flex items-center justify-center p-5">
           <Image
             src={brand.logo.url}
@@ -18,7 +18,7 @@ export default function BrandCard({ brand }: { brand: Brand }) {
             className="h-12 w-auto max-w-full object-contain"
           />
         </div>
-        <footer className="px-5 py-3 border-t">
+        <footer className="px-5 py-3 border-t border-[#c9c9cf]">
           <p className="min-h-[2lh]">{brand.description}</p>
         </footer>
       </article>

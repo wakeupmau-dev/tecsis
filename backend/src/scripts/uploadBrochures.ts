@@ -295,6 +295,7 @@ function byBrandThenTitle(a: Brochure, b: Brochure) {
 type ManifestBrochure = {
   title: string;
   url: string;
+  cover: string;
   originalBytes: number;
   bytes: number;
   pages?: { first: number; last: number };
@@ -308,6 +309,14 @@ type ManifestBrand = {
   logo: { id: string; url: string };
   brochures: ManifestBrochure[];
 };
+
+// Page 1 of the PDF as a 400px-wide image. Cloudinary renders PDF pages for
+// image-type assets; the extension switches delivery from PDF to image.
+function coverUrl(pdfUrl: string) {
+  return pdfUrl
+    .replace("/image/upload/", "/image/upload/pg_1,w_400,f_auto,q_auto/")
+    .replace(/\.pdf$/, ".jpg");
+}
 
 // Logo urls come from the logo script's output, so each brand carries its own.
 function readLogos() {
@@ -353,6 +362,7 @@ async function writeManifest() {
     group.brochures.push({
       title: brochure.title,
       url: asset.url,
+      cover: coverUrl(asset.url),
       originalBytes: brochure.originalBytes,
       bytes: asset.bytes,
       ...(brochure.pages && { pages: brochure.pages }),

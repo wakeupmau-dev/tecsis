@@ -27,16 +27,45 @@ const LOGOS: Record<string, string> = {
   "powerside_white.png": "powerside",
 };
 
-// Background tolerance for make_transparent; a few files have an off-white
-// background that the default leaves behind.
-const TOLERANCE: Record<string, number> = { "thermo-scientific": 25 };
-const DEFAULT_TOLERANCE = 10;
+// How each logo's white background is made transparent. By default the
+// effect runs before trimming, on the full image, sampling a corner pixel as
+// the background: that keeps working when the artwork, once trimmed, touches
+// the edges (HIPOTRONICS). Two logos need it after trimming instead: the
+// Thermo Scientific BMP has an off-white background (higher tolerance), and
+// the Tecsis "T" touches the corner even in the original, so its background is
+// named. Each combination was checked by measuring transparent pixels.
+type Transparency = { afterTrim: boolean; tolerance: number; color?: string };
+const DEFAULT_TRANSPARENCY: Transparency = { afterTrim: false, tolerance: 10 };
+const TRANSPARENCY: Record<string, Transparency> = {
+  "thermo-scientific": { afterTrim: true, tolerance: 25 },
+  tecsis: { afterTrim: true, tolerance: 10, color: "white" },
+};
 
 const TECSIS_LOGO = { file: "Logo TECSIS ALTA.png", slug: "tecsis" };
 const TECSIS_OUTPUT = join(
   import.meta.dirname,
   "../../../frontend/src/data/tecsis-logo.json",
 );
+
+// Capped first (the free plan refuses transformations over 25 megapixels and
+// trim works on the full image), white made transparent, empty margins
+// trimmed so every logo fills its height, fitted to 160px, then delivered as a
+// small modern format instead of the multi-megabyte originals.
+function transformationFor(slug: string) {
+  const { afterTrim, tolerance, color } = TRANSPARENCY[slug] ?? DEFAULT_TRANSPARENCY;
+  const transparent = {
+    effect: `make_transparent:${tolerance}`,
+    ...(color && { color }),
+  };
+  return [
+    { width: 2000, crop: "limit" },
+    ...(afterTrim ? [] : [transparent]),
+    { effect: "trim" },
+    { height: 160, crop: "fit" },
+    ...(afterTrim ? [transparent] : []),
+    { fetch_format: "auto", quality: "auto" },
+  ];
+}
 
 async function uploadLogo(file: string, slug: string) {
   const result = await cloudinary.uploader.upload(join(ROOT, file), {
@@ -45,22 +74,10 @@ async function uploadLogo(file: string, slug: string) {
     overwrite: true,
     invalidate: true,
   });
-  // Empty margins trimmed so every logo fills its height, fitted to 160px,
-  // white backgrounds made transparent (the marquee's transforms stop CSS
-  // blend modes from reaching the page), then delivered as a small modern
-  // format instead of the multi-megabyte originals.
   const url = cloudinary.url(result.public_id, {
     secure: true,
     version: result.version,
-    transformation: [
-      // Capped first: the free plan refuses transformations over 25 megapixels,
-      // and trim works on the full image (the PRIDE file is 26.7).
-      { width: 2000, crop: "limit" },
-      { effect: "trim" },
-      { height: 160, crop: "fit" },
-      { effect: `make_transparent:${TOLERANCE[slug] ?? DEFAULT_TOLERANCE}` },
-      { fetch_format: "auto", quality: "auto" },
-    ],
+    transformation: transformationFor(slug),
     urlAnalytics: false,
   });
   console.log(`${result.public_id.padEnd(24)} ${url}`);

@@ -123,7 +123,7 @@ export const brochureTitles: Record<string, string> = {
   "brochures/haefely/ttr279x-haefely-brochure": "TTR 2795 TTR 2796",
   // HIGHTEST
   // REVIEW New Catalogue 2026.pdf
-  "brochures/hightest/new-catalogue-2026": "GENERAL CATALOGUE 2022",
+  "brochures/hightest/new-catalogue-2026": "General Catalogue 2022",
   // HIPOTRONICS
   // 3695.pdf
   "brochures/hipotronics/3695": "3695",
@@ -140,9 +140,9 @@ export const brochureTitles: Record<string, string> = {
   // HIPO_8000PL_SPEC.pdf
   "brochures/hipotronics/hipo-8000pl-spec": "8000 PL Series",
   // REVIEW HIPO_800PL-HD_DS.pdf
-  "brochures/hipotronics/hipo-800pl-hd-ds": "800PL-HD SERIES",
+  "brochures/hipotronics/hipo-800pl-hd-ds": "800PL-HD Series",
   // REVIEW HIPO_800PL-HD_DS_2020.pdf
-  "brochures/hipotronics/hipo-800pl-hd-ds-2020": "800PL-HD SERIES",
+  "brochures/hipotronics/hipo-800pl-hd-ds-2020": "800PL-HD Series",
   // HIPO_8175PL_DS_SPEC.pdf
   "brochures/hipotronics/hipo-8175pl-ds-spec": "8175 PL Series",
   // HIPO_H306_DS_SPEC.pdf
@@ -154,7 +154,7 @@ export const brochureTitles: Record<string, string> = {
   // HIPO_HVT-DI _DS_2019_12_SPEC.pdf
   "brochures/hipotronics/hipo-hvt-di-ds-2019-12-spec": "HVT-DI Series",
   // HIPO_KVM-W_DS_2021_11_SPEC.pdf
-  "brochures/hipotronics/hipo-kvm-w-ds-2021-11-spec": "KVM-W SERIES",
+  "brochures/hipotronics/hipo-kvm-w-ds-2021-11-spec": "KVM-W Series",
   // HIPOTRONICS_8170-5PL_Datasheet.pdf
   "brochures/hipotronics/hipotronics-8170-5pl-datasheet": "800PL Series",
   // REVIEW HIPOTRONICS_Aerial Lift Testing_03_2019 Application Note (1).pdf
@@ -177,14 +177,14 @@ export const brochureTitles: Record<string, string> = {
   // FireFly Gold Measurement.pdf
   "brochures/lightigo/firefly-gold-measurement": "FireFly",
   // REVIEW mining_v1.3-Spanish.pdf
-  "brochures/lightigo/mining-v1-3-spanish": "ANÁLYSIS ELEMENTAL RÁPIDO PARA LA INDSUTRIA MINERA",
+  "brochures/lightigo/mining-v1-3-spanish": "Análysis elemental rápido para la indsutria minera",
   // POWERSIDE
   // DriveScan-MV-Drive-Smart-Mining-Brochure.pdf
   "brochures/powerside/drivescan-mv-drive-smart-mining-brochure": "Why Remote Monitoring of Variable Frequency Drives aligns so well with Smart Mining objectives",
   // PQube Spanish Brochure.pdf
   "brochures/powerside/pqube-spanish-brochure": "Descubra PQube 3",
   // REVIEW PQView 1 page info (Spanish).pdf
-  "brochures/powerside/pqview-1-page-info-spanish": "EL SOFTWARE LÍDER PARA LA GESTIÓNY ANÁLISIS DE CALIDAD DE ENERGÍA CONCENTRADOR DE DATOS MONITOREO ADMINISTRACIÓN DE USUARIOS ANÁLISIS DETALLADO REPORTES",
+  "brochures/powerside/pqview-1-page-info-spanish": "El software líder para la gestióny análisis de calidad de energía concentrador de datos monitoreo administración de usuarios análisis detallado reportes",
   // PQView Brochure.pdf
   "brochures/powerside/pqview-brochure": "PQView",
   // Qubescan Brochure.pdf
@@ -193,7 +193,7 @@ export const brochureTitles: Record<string, string> = {
   "brochures/powerside/todos-los-productos-de-powerside": "Conozca Nuestro Portafolio de Monitoreo y Corrección de Calidad de Energía",
   // PRIDE
   // REVIEW 1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的.pdf
-  "brochures/pride/1shenzhen-pride-catalog-2027-instruments": "1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的",
+  "brochures/pride/1shenzhen-pride-catalog-2027-instruments": "1SHENZHEN Pride Catalog 2027-INSTRUMENTS转曲的",
   // REROS
   // REVIEW Reros UPS Catalog.pdf
   "brochures/reros/reros-ups-catalog": "Reros UPS Catalog",
@@ -218,15 +218,15 @@ export const brochureTitles: Record<string, string> = {
   "brochures/thermo-niton/xrf-niton-folleto-para-metales-esp-lr": "Análisis no destructivo de metales",
   // XRF SCIENTIFIC
   // REVIEW CS-1232-Carbon-Sulphur-Analyser-brochure-reduced-size.pdf
-  "brochures/xrf-scientific/cs-1232-carbon-sulphur-analyser-brochure-reduced-size": "CARBON SULPHUR ANALYSIS",
+  "brochures/xrf-scientific/cs-1232-carbon-sulphur-analyser-brochure-reduced-size": "Carbon Sulphur Analysis",
   // REVIEW Orbis-range-brochure-Sept-2026-compressed.pdf
-  "brochures/xrf-scientific/orbis-range-brochure-sept-2026-compressed": "ULTRA PERFORMANCE LABORATORY JAW CRUSHERS",
+  "brochures/xrf-scientific/orbis-range-brochure-sept-2026-compressed": "Ultra Performance Laboratory Jaw Crushers",
   // REVIEW Orbis-RSD-LSD-brochure-reduced-size.pdf
-  "brochures/xrf-scientific/orbis-rsd-lsd-brochure-reduced-size": "AUTOMATED SAMPLE DIVIDER",
+  "brochures/xrf-scientific/orbis-rsd-lsd-brochure-reduced-size": "Automated Sample Divider",
   // REVIEW XRF-23007_FL_A4_6seiter-Machines_Phoenix_GO_EN_V01.pdf
-  "brochures/xrf-scientific/xrf-23007-fl-a4-6seiter-machines-phoenix-go-en-v01": "PHOENIX GO SERIES GAS FUSION MACHINE",
+  "brochures/xrf-scientific/xrf-23007-fl-a4-6seiter-machines-phoenix-go-en-v01": "Phoenix GO Series Gas Fusion Machine",
   // XRF-24003_FL_A4_6seiter-Machines_XRFuse6_EN_final_WEB.pdf
   "brochures/xrf-scientific/xrf-24003-fl-a4-6seiter-machines-xrfuse6-en-final-web": "XrFuse 6 ELECTRIC FUSION MACHINE",
   // REVIEW xrTGA-1100-brochure.pdf
-  "brochures/xrf-scientific/xrtga-1100-brochure": "THERMOGRAVIMETRIC ANALYSIS",
+  "brochures/xrf-scientific/xrtga-1100-brochure": "Thermogravimetric Analysis",
 };

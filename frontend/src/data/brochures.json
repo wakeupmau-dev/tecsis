@@ -5,84 +5,97 @@
     "description": "Equipos para mediciones acústicas",
     "logo": {
       "id": "logos/bruel-kjaer",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118004/logos/bruel-kjaer"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118004/logos/bruel-kjaer"
     },
     "brochures": [
       {
         "title": "B&K 2245 and HBK 2255 with Noise Partner",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112543/brochures/bruel-kjaer/manual-usuario-sonometro-2255.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112543/brochures/bruel-kjaer/manual-usuario-sonometro-2255.jpg",
         "originalBytes": 1903043,
         "bytes": 1727718
       },
       {
         "title": "B&K 2245 Sound Level Meter with Noise Partner BZ-7300 (bp0029)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112517/brochures/bruel-kjaer/2245-sound-level-meter.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112517/brochures/bruel-kjaer/2245-sound-level-meter.jpg",
         "originalBytes": 1693824,
         "bytes": 339820
       },
       {
         "title": "BRÜEL & KJÆR Data Acquisition Hardware",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112531/brochures/bruel-kjaer/lan-xi-light.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112531/brochures/bruel-kjaer/lan-xi-light.jpg",
         "originalBytes": 1040405,
         "bytes": 237272
       },
       {
         "title": "Building Acoustics Partner for HBK 2255 Sound Level Meter",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112519/brochures/bruel-kjaer/2255-bulding-acoustic.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112519/brochures/bruel-kjaer/2255-bulding-acoustic.jpg",
         "originalBytes": 1048194,
         "bytes": 376461
       },
       {
         "title": "HBK 2255 Sound Level Meter",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112520/brochures/bruel-kjaer/2255.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112520/brochures/bruel-kjaer/2255.jpg",
         "originalBytes": 1162327,
         "bytes": 370589
       },
       {
         "title": "Heavy-duty Impact Hammers Types 8207, 8208 and 8210 (bp2079)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112528/brochures/bruel-kjaer/impact-hammers-b-k.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112528/brochures/bruel-kjaer/impact-hammers-b-k.jpg",
         "originalBytes": 416164,
         "bytes": 416164
       },
       {
         "title": "hidrofonos",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112538/brochures/bruel-kjaer/hidrofonos.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112538/brochures/bruel-kjaer/hidrofonos.jpg",
         "originalBytes": 1912641,
         "bytes": 784518
       },
       {
         "title": "Impedance Tube Kit Types 4206 and 4206-A, and Transmission Loss Tube Kit Type 4206-T (bp1039)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112535/brochures/bruel-kjaer/transmission-loss-tube-kit-50hz-6-4-khz-type-4206-t-bp1039.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112535/brochures/bruel-kjaer/transmission-loss-tube-kit-50hz-6-4-khz-type-4206-t-bp1039.jpg",
         "originalBytes": 562371,
         "bytes": 562371
       },
       {
         "title": "Primeros Pasos",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112546/brochures/bruel-kjaer/primeros-pasos-2245.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112546/brochures/bruel-kjaer/primeros-pasos-2245.jpg",
         "originalBytes": 2125054,
         "bytes": 569162
       },
       {
         "title": "Sonómetro B&K 2245 con Enviro Noise Partner BZ-7301 (bp2615)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112522/brochures/bruel-kjaer/b-k-2245-con-enviro-noise-partner.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112522/brochures/bruel-kjaer/b-k-2245-con-enviro-noise-partner.jpg",
         "originalBytes": 1532329,
         "bytes": 328432
       },
       {
         "title": "Sonómetro B&K 2245 con Exhaust Noise Partner BZ-7304 (bp2623)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112523/brochures/bruel-kjaer/b-k-2245-con-exhaust-noise-partner.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112523/brochures/bruel-kjaer/b-k-2245-con-exhaust-noise-partner.jpg",
         "originalBytes": 1487830,
         "bytes": 313204
       },
       {
         "title": "Sonómetro B&K 2245 con Noise Partner BZ-7300 (bp2611)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112525/brochures/bruel-kjaer/b-k-2245-con-noise-partner.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112525/brochures/bruel-kjaer/b-k-2245-con-noise-partner.jpg",
         "originalBytes": 1436277,
         "bytes": 344304
       },
       {
         "title": "Sonómetro B&K 2245 con Work Noise Partner BZ-7302 (bp2619)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112526/brochures/bruel-kjaer/b-k-2245-con-work-noise-partner.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112526/brochures/bruel-kjaer/b-k-2245-con-work-noise-partner.jpg",
         "originalBytes": 1471295,
         "bytes": 329401
       }
@@ -94,24 +107,27 @@
     "description": "Equipos láser para análisis de mecánica de fluidos",
     "logo": {
       "id": "logos/dantec-dynamics",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118008/logos/dantec-dynamics"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118008/logos/dantec-dynamics"
     },
     "brochures": [
       {
         "title": "Illumination Solutions",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112313/brochures/dantec-dynamics/dds-dic-prs-illum-en-v4.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112313/brochures/dantec-dynamics/dds-dic-prs-illum-en-v4.jpg",
         "originalBytes": 5138570,
         "bytes": 4212875
       },
       {
         "title": "Illumination Systems",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112310/brochures/dantec-dynamics/0810-v3-ds-ill-systems-for-dic.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112310/brochures/dantec-dynamics/0810-v3-ds-ill-systems-for-dic.jpg",
         "originalBytes": 1459288,
         "bytes": 183239
       },
       {
         "title": "XR/XB-LED Illumination System SXR/SXB-LED Illumination System X-Illumination Controller",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112315/brochures/dantec-dynamics/dds-dic-prs-illum-hw-en-v2.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112315/brochures/dantec-dynamics/dds-dic-prs-illum-hw-en-v2.jpg",
         "originalBytes": 4823274,
         "bytes": 4510476
       }
@@ -123,18 +139,20 @@
     "description": "Equipos de monitoreo de condición de transformadores",
     "logo": {
       "id": "logos/electron",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118012/logos/electron"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118012/logos/electron"
     },
     "brochures": [
       {
         "title": "Electron Products Portfolio-English REV1 2023",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112480/brochures/electron/electron-products-portfolio-english-rev1-2023.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112480/brochures/electron/electron-products-portfolio-english-rev1-2023.jpg",
         "originalBytes": 11684212,
         "bytes": 8775920
       },
       {
         "title": "Folleto ELECTRON",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112483/brochures/electron/folleto-electron.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112483/brochures/electron/folleto-electron.jpg",
         "originalBytes": 3139627,
         "bytes": 2062231
       }
@@ -146,240 +164,279 @@
     "description": "Equipos para pruebas en transformadores",
     "logo": {
       "id": "logos/haefely",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118013/logos/haefely"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118013/logos/haefely"
     },
     "brochures": [
       {
         "title": "2293",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112620/brochures/haefely/haefely-2293-winding-analyzer-0417-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112620/brochures/haefely/haefely-2293-winding-analyzer-0417-spec.jpg",
         "originalBytes": 1175064,
         "bytes": 1175064
       },
       {
         "title": "2293 & 2883 MIDAS micro",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112624/brochures/haefely/haefely-2293-and-2883-midas-micro-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112624/brochures/haefely/haefely-2293-and-2883-midas-micro-brochure.jpg",
         "originalBytes": 3587048,
         "bytes": 1945347
       },
       {
         "title": "2830 / 2831",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112625/brochures/haefely/haefely-2830-2831.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112625/brochures/haefely/haefely-2830-2831.jpg",
         "originalBytes": 752018,
         "bytes": 420122
       },
       {
         "title": "3730",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112589/brochures/haefely/3730-standard-capacitor-for-functional-check-of-power-factor-tan-delta-measuring-bridges-haefely-datasheet-v2004.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112589/brochures/haefely/3730-standard-capacitor-for-functional-check-of-power-factor-tan-delta-measuring-bridges-haefely-datasheet-v2004.jpg",
         "originalBytes": 322222,
         "bytes": 198508
       },
       {
         "title": "5287",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112591/brochures/haefely/5287-current-booster-haefely-datasheet-v2005.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112591/brochures/haefely/5287-current-booster-haefely-datasheet-v2005.jpg",
         "originalBytes": 339717,
         "bytes": 196468
       },
       {
         "title": "5478",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112592/brochures/haefely/5478-portable-tera-ohmeter-5-kv-haefely-datasheet-v2005.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112592/brochures/haefely/5478-portable-tera-ohmeter-5-kv-haefely-datasheet-v2005.jpg",
         "originalBytes": 402778,
         "bytes": 239681
       },
       {
         "title": "6835",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112594/brochures/haefely/6835-test-cells-for-liquid-insulants-haefely-datasheet-v2005.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112594/brochures/haefely/6835-test-cells-for-liquid-insulants-haefely-datasheet-v2005.jpg",
         "originalBytes": 394819,
         "bytes": 266113
       },
       {
         "title": "9230",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112627/brochures/haefely/haefely-9230.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112627/brochures/haefely/haefely-9230.jpg",
         "originalBytes": 1630799,
         "bytes": 317938
       },
       {
         "title": "9230/25/1-PD",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112598/brochures/haefely/9230251-pd-coupling-capacitor-25-kv-for-ddx-9121-haefely.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112598/brochures/haefely/9230251-pd-coupling-capacitor-25-kv-for-ddx-9121-haefely.jpg",
         "originalBytes": 252700,
         "bytes": 252700
       },
       {
         "title": "9230/30/9-PD",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112596/brochures/haefely/9230-pd-coupling-capacitor-30-kv-for-partial-discharge-measurement-haefely-datasheet-v2004.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112596/brochures/haefely/9230-pd-coupling-capacitor-30-kv-for-partial-discharge-measurement-haefely-datasheet-v2004.jpg",
         "originalBytes": 314864,
         "bytes": 194536
       },
       {
         "title": "9231/25/1-PD",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112599/brochures/haefely/9231-25-1-pd-coupling-capacitor-25-kv-for-partial-discharge-measurement-haefely-datasheet-v2501.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112599/brochures/haefely/9231-25-1-pd-coupling-capacitor-25-kv-for-partial-discharge-measurement-haefely-datasheet-v2501.jpg",
         "originalBytes": 243001,
         "bytes": 243001
       },
       {
         "title": "AKV 9310",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112601/brochures/haefely/akv-9310-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112601/brochures/haefely/akv-9310-datasheet.jpg",
         "originalBytes": 285329,
         "bytes": 285329
       },
       {
         "title": "AKV 9310",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112629/brochures/haefely/haefely-akv9310.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112629/brochures/haefely/haefely-akv9310.jpg",
         "originalBytes": 609702,
         "bytes": 278713
       },
       {
         "title": "DDX 9121b",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112605/brochures/haefely/ddx9121b-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112605/brochures/haefely/ddx9121b-brochure.jpg",
         "originalBytes": 5167754,
         "bytes": 770123
       },
       {
         "title": "DDX 9121b",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112619/brochures/haefely/haefely-160407-press-release-ddx-9121b-ds2-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112619/brochures/haefely/haefely-160407-press-release-ddx-9121b-ds2-spec.jpg",
         "originalBytes": 923695,
         "bytes": 923695
       },
       {
         "title": "DDX 9121b",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112631/brochures/haefely/haefely-ddx-9121b.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112631/brochures/haefely/haefely-ddx-9121b.jpg",
         "originalBytes": 1386767,
         "bytes": 846890
       },
       {
         "title": "DDX 9160",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112611/brochures/haefely/ddx9160-partial-discharge-pd-radio-interference-voltage-riv-detector-haefely-datasheet-v2312-01.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112611/brochures/haefely/ddx9160-partial-discharge-pd-radio-interference-voltage-riv-detector-haefely-datasheet-v2312-01.jpg",
         "originalBytes": 265195,
         "bytes": 265195
       },
       {
         "title": "DDX 9160/9161",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112609/brochures/haefely/ddx9160-9161-partial-discharge-pd-radio-interference-voltage-riv-detector-haefely-brochure-v2408-01.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112609/brochures/haefely/ddx9160-9161-partial-discharge-pd-radio-interference-voltage-riv-detector-haefely-brochure-v2408-01.jpg",
         "originalBytes": 10590605,
         "bytes": 3047817
       },
       {
         "title": "FRA 5310",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112632/brochures/haefely/haefely-fra5310-ds-0817-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112632/brochures/haefely/haefely-fra5310-ds-0817-spec.jpg",
         "originalBytes": 685901,
         "bytes": 685901
       },
       {
         "title": "FRA 5311",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112615/brochures/haefely/fra-5311-haefely.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112615/brochures/haefely/fra-5311-haefely.jpg",
         "originalBytes": 317662,
         "bytes": 204389
       },
       {
         "title": "IDAS 2823 & 2823-REF",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112651/brochures/haefely/idas-2823-highest-precision-tan-d-power-factor-measuring-instrument-haefely-brochure-v2020-11.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112651/brochures/haefely/idas-2823-highest-precision-tan-d-power-factor-measuring-instrument-haefely-brochure-v2020-11.jpg",
         "originalBytes": 3167532,
         "bytes": 980931
       },
       {
         "title": "KAL 9510",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112628/brochures/haefely/haefely-9510-kal.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112628/brochures/haefely/haefely-9510-kal.jpg",
         "originalBytes": 653474,
         "bytes": 285146
       },
       {
         "title": "KAL 9510",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112634/brochures/haefely/haefely-kal-9510.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112634/brochures/haefely/haefely-kal-9510.jpg",
         "originalBytes": 355183,
         "bytes": 355183
       },
       {
         "title": "KAL 9510",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112652/brochures/haefely/kal-9510-intermediate-partial-discharge-calibrator-haefely-datasheet-v2004.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112652/brochures/haefely/kal-9510-intermediate-partial-discharge-calibrator-haefely-datasheet-v2004.jpg",
         "originalBytes": 315564,
         "bytes": 189824
       },
       {
         "title": "KAL 9511",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112653/brochures/haefely/kal-9511-basic-partial-discharge-calibrator-haefely-datasheet-v2010.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112653/brochures/haefely/kal-9511-basic-partial-discharge-calibrator-haefely-datasheet-v2010.jpg",
         "originalBytes": 249196,
         "bytes": 249196
       },
       {
         "title": "KAL 9520",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112654/brochures/haefely/kal-9520-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112654/brochures/haefely/kal-9520-datasheet.jpg",
         "originalBytes": 253037,
         "bytes": 253037
       },
       {
         "title": "KVM Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112635/brochures/haefely/haefely-kvm-ds-0217-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112635/brochures/haefely/haefely-kvm-ds-0217-spec.jpg",
         "originalBytes": 471093,
         "bytes": 319835
       },
       {
         "title": "MIDAS 2881 / 2881G",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112636/brochures/haefely/haefely-midas-2881-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112636/brochures/haefely/haefely-midas-2881-spec.jpg",
         "originalBytes": 920278,
         "bytes": 920278
       },
       {
         "title": "MIDAS 2881 & 2881G",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112655/brochures/haefely/midas-2881-mobile-insulation-diagnosis-haefely.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112655/brochures/haefely/midas-2881-mobile-insulation-diagnosis-haefely.jpg",
         "originalBytes": 1020993,
         "bytes": 787524
       },
       {
         "title": "MIDAS micro2883",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112656/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-haefely.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112656/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-haefely.jpg",
         "originalBytes": 943782,
         "bytes": 525333
       },
       {
         "title": "MIDAS micro2883",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112657/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-analysing-system-haefely-datasheet-v2207.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112657/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-analysing-system-haefely-datasheet-v2207.jpg",
         "originalBytes": 725715,
         "bytes": 725715
       },
       {
         "title": "OC60-DI",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112617/brochures/haefely/haefely-oc60-di-specsheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112617/brochures/haefely/haefely-oc60-di-specsheet.jpg",
         "originalBytes": 1122492,
         "bytes": 317391
       },
       {
         "title": "RIC 422",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112602/brochures/haefely/calibrador-ric-422-pdf.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112602/brochures/haefely/calibrador-ric-422-pdf.jpg",
         "originalBytes": 1462997,
         "bytes": 236367
       },
       {
         "title": "RSKF",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112641/brochures/haefely/haefely-rskf-application-note.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112641/brochures/haefely/haefely-rskf-application-note.jpg",
         "originalBytes": 26429855,
         "bytes": 665115
       },
       {
         "title": "RSKF",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112645/brochures/haefely/haefely-rskf-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112645/brochures/haefely/haefely-rskf-spec.jpg",
         "originalBytes": 26420485,
         "bytes": 665345
       },
       {
         "title": "RVM 5462b",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112660/brochures/haefely/rvm-5462b-recovery-voltage-meter-haefely-datasheet-v2010.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112660/brochures/haefely/rvm-5462b-recovery-voltage-meter-haefely-datasheet-v2010.jpg",
         "originalBytes": 1311945,
         "bytes": 650031
       },
       {
         "title": "TTR 2795 TTR 2796",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112665/brochures/haefely/ttr279x-haefely-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112665/brochures/haefely/ttr279x-haefely-brochure.jpg",
         "originalBytes": 6122215,
         "bytes": 1269556
       },
       {
         "title": "TTR2795",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112648/brochures/haefely/haefely-ttr2795-ds-0917-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112648/brochures/haefely/haefely-ttr2795-ds-0917-spec.jpg",
         "originalBytes": 481803,
         "bytes": 448589
       },
       {
         "title": "WA 2293",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112587/brochures/haefely/2293-automatic-transformer-winding-analyser-haefely-datasheet-v2002.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112587/brochures/haefely/2293-automatic-transformer-winding-analyser-haefely-datasheet-v2002.jpg",
         "originalBytes": 463958,
         "bytes": 267656
       }
@@ -391,12 +448,13 @@
     "description": "Equipamiento para pruebas en transformadores",
     "logo": {
       "id": "logos/hightest",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118010/logos/hightest"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118010/logos/hightest"
     },
     "brochures": [
       {
-        "title": "GENERAL CATALOGUE 2022",
+        "title": "General Catalogue 2022",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112308/brochures/hightest/new-catalogue-2026.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112308/brochures/hightest/new-catalogue-2026.jpg",
         "originalBytes": 2081000,
         "bytes": 1765077
       }
@@ -408,138 +466,160 @@
     "description": "Equipos de pruebas en cables y equipos de alta tensión",
     "logo": {
       "id": "logos/hipotronics",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118011/logos/hipotronics"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118011/logos/hipotronics"
     },
     "brochures": [
       {
         "title": "3695",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112487/brochures/hipotronics/3695.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112487/brochures/hipotronics/3695.jpg",
         "originalBytes": 272093,
         "bytes": 272093
       },
       {
         "title": "5478",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112489/brochures/hipotronics/5478-ds-1.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112489/brochures/hipotronics/5478-ds-1.jpg",
         "originalBytes": 200177,
         "bytes": 200177
       },
       {
         "title": "700-DI Series AC Dielectric Test Sets",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112491/brochures/hipotronics/700-di-ds-2019-06.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112491/brochures/hipotronics/700-di-ds-2019-06.jpg",
         "originalBytes": 472811,
         "bytes": 472811
       },
       {
         "title": "700-DI Series AC Dielectric Test Sets",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112492/brochures/hipotronics/700-di-ds-2020-02.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112492/brochures/hipotronics/700-di-ds-2020-02.jpg",
         "originalBytes": 228895,
         "bytes": 228895
       },
       {
         "title": "8000 PL Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112498/brochures/hipotronics/hipo-8000pl-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112498/brochures/hipotronics/hipo-8000pl-spec.jpg",
         "originalBytes": 608668,
         "bytes": 537632
       },
       {
         "title": "800PL Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112496/brochures/hipotronics/hipotronics-8170-5pl-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112496/brochures/hipotronics/hipotronics-8170-5pl-datasheet.jpg",
         "originalBytes": 192877,
         "bytes": 192877
       },
       {
         "title": "800PL-HD Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112494/brochures/hipotronics/800pl-hd-2019.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112494/brochures/hipotronics/800pl-hd-2019.jpg",
         "originalBytes": 226557,
         "bytes": 226557
       },
       {
-        "title": "800PL-HD SERIES",
+        "title": "800PL-HD Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112499/brochures/hipotronics/hipo-800pl-hd-ds.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112499/brochures/hipotronics/hipo-800pl-hd-ds.jpg",
         "originalBytes": 321221,
         "bytes": 230594
       },
       {
-        "title": "800PL-HD SERIES",
+        "title": "800PL-HD Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112500/brochures/hipotronics/hipo-800pl-hd-ds-2020.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112500/brochures/hipotronics/hipo-800pl-hd-ds-2020.jpg",
         "originalBytes": 175233,
         "bytes": 175233
       },
       {
         "title": "8175 PL Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112503/brochures/hipotronics/hipo-8175pl-ds-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112503/brochures/hipotronics/hipo-8175pl-ds-spec.jpg",
         "originalBytes": 1356506,
         "bytes": 355824
       },
       {
         "title": "Aerial Lift Testing",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112715/brochures/hipotronics/hipotronics-aerial-lift-testing-03-2019-application-note-1.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112715/brochures/hipotronics/hipotronics-aerial-lift-testing-03-2019-application-note-1.jpg",
         "originalBytes": 2369838,
         "bytes": 655263
       },
       {
         "title": "H306 Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112504/brochures/hipotronics/hipo-h306-ds-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112504/brochures/hipotronics/hipo-h306-ds-spec.jpg",
         "originalBytes": 251890,
         "bytes": 251890
       },
       {
         "title": "HD100 Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112506/brochures/hipotronics/hipo-hd100-ds-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112506/brochures/hipotronics/hipo-hd100-ds-spec.jpg",
         "originalBytes": 1031092,
         "bytes": 384700
       },
       {
         "title": "HIPODirect",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112495/brochures/hipotronics/hipo-hipodirect-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112495/brochures/hipotronics/hipo-hipodirect-spec.jpg",
         "originalBytes": 225246,
         "bytes": 152427
       },
       {
         "title": "HVM5 Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112513/brochures/hipotronics/megaohmetro-hvm-hipotronics.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112513/brochures/hipotronics/megaohmetro-hvm-hipotronics.jpg",
         "originalBytes": 149579,
         "bytes": 127874
       },
       {
         "title": "HVT-DI Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112507/brochures/hipotronics/hipo-hvt-di-ds-2019-12-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112507/brochures/hipotronics/hipo-hvt-di-ds-2019-12-spec.jpg",
         "originalBytes": 341584,
         "bytes": 341584
       },
       {
         "title": "HVT-DI-UPG",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112510/brochures/hipotronics/hvt-di-upg-ds-2021-02.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112510/brochures/hipotronics/hvt-di-upg-ds-2021-02.jpg",
         "originalBytes": 267197,
         "bytes": 267197
       },
       {
         "title": "iHV",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112514/brochures/hipotronics/tsr-ihv.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112514/brochures/hipotronics/tsr-ihv.jpg",
         "originalBytes": 749588,
         "bytes": 470108
       },
       {
         "title": "KVM-W Series",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112512/brochures/hipotronics/kvm-w-ds-2019.pdf",
-        "originalBytes": 2616428,
-        "bytes": 491433
-      },
-      {
-        "title": "KVM-W SERIES",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112508/brochures/hipotronics/hipo-kvm-w-ds-2021-11-spec.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112508/brochures/hipotronics/hipo-kvm-w-ds-2021-11-spec.jpg",
         "originalBytes": 148987,
         "bytes": 148987
       },
       {
+        "title": "KVM-W Series",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112512/brochures/hipotronics/kvm-w-ds-2019.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112512/brochures/hipotronics/kvm-w-ds-2019.jpg",
+        "originalBytes": 2616428,
+        "bytes": 491433
+      },
+      {
         "title": "Sectionalizing Primary Cable Fault Locator",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112516/brochures/hipotronics/x-wave.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112516/brochures/hipotronics/x-wave.jpg",
         "originalBytes": 485728,
         "bytes": 375593
       },
       {
         "title": "VLF Hipot Tester",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112488/brochures/hipotronics/5-4-1-hzdp-vlf-hipot-tester-user-manual.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112488/brochures/hipotronics/5-4-1-hzdp-vlf-hipot-tester-user-manual.jpg",
         "originalBytes": 1088091,
         "bytes": 1088091
       }
@@ -551,30 +631,34 @@
     "description": "Espectrómetros LIBS",
     "logo": {
       "id": "logos/lightigo",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118014/logos/lightigo"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118014/logos/lightigo"
     },
     "brochures": [
       {
         "title": "AN Lithium",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111632/brochures/lightigo/an-lithium.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111632/brochures/lightigo/an-lithium.jpg",
         "originalBytes": 1924833,
         "bytes": 304643
       },
       {
-        "title": "ANÁLYSIS ELEMENTAL RÁPIDO PARA LA INDSUTRIA MINERA",
+        "title": "Análysis elemental rápido para la indsutria minera",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111637/brochures/lightigo/mining-v1-3-spanish.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111637/brochures/lightigo/mining-v1-3-spanish.jpg",
         "originalBytes": 1328202,
         "bytes": 476280
       },
       {
         "title": "FireFly",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111633/brochures/lightigo/ds-firefly-web.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111633/brochures/lightigo/ds-firefly-web.jpg",
         "originalBytes": 1072817,
         "bytes": 202597
       },
       {
         "title": "FireFly",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111634/brochures/lightigo/firefly-gold-measurement.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111634/brochures/lightigo/firefly-gold-measurement.jpg",
         "originalBytes": 373593,
         "bytes": 321688
       }
@@ -586,42 +670,48 @@
     "description": "Equipos para pruebas de calidad de energía",
     "logo": {
       "id": "logos/powerside",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118017/logos/powerside"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118017/logos/powerside"
     },
     "brochures": [
       {
         "title": "Conozca Nuestro Portafolio de Monitoreo y Corrección de Calidad de Energía",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112584/brochures/powerside/todos-los-productos-de-powerside.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112584/brochures/powerside/todos-los-productos-de-powerside.jpg",
         "originalBytes": 3880345,
         "bytes": 1322423
       },
       {
         "title": "Descubra PQube 3",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112571/brochures/powerside/pqube-spanish-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112571/brochures/powerside/pqube-spanish-brochure.jpg",
         "originalBytes": 8541738,
         "bytes": 807566
       },
       {
-        "title": "EL SOFTWARE LÍDER PARA LA GESTIÓNY ANÁLISIS DE CALIDAD DE ENERGÍA CONCENTRADOR DE DATOS MONITOREO ADMINISTRACIÓN DE USUARIOS ANÁLISIS DETALLADO REPORTES",
+        "title": "El software líder para la gestióny análisis de calidad de energía concentrador de datos monitoreo administración de usuarios análisis detallado reportes",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112559/brochures/powerside/pqview-1-page-info-spanish.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112559/brochures/powerside/pqview-1-page-info-spanish.jpg",
         "originalBytes": 1496134,
         "bytes": 136166
       },
       {
         "title": "PQView",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112565/brochures/powerside/pqview-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112565/brochures/powerside/pqview-brochure.jpg",
         "originalBytes": 461114,
         "bytes": 126291
       },
       {
         "title": "QubeScan",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112575/brochures/powerside/qubescan-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112575/brochures/powerside/qubescan-brochure.jpg",
         "originalBytes": 1153467,
         "bytes": 217319
       },
       {
         "title": "Why Remote Monitoring of Variable Frequency Drives aligns so well with Smart Mining objectives",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112551/brochures/powerside/drivescan-mv-drive-smart-mining-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112551/brochures/powerside/drivescan-mv-drive-smart-mining-brochure.jpg",
         "originalBytes": 523135,
         "bytes": 255188
       }
@@ -633,12 +723,13 @@
     "description": "Equipos de ensayos y preparación de muestras",
     "logo": {
       "id": "logos/pride",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118005/logos/pride"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118005/logos/pride"
     },
     "brochures": [
       {
-        "title": "1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的 (1/3)",
+        "title": "1SHENZHEN Pride Catalog 2027-INSTRUMENTS转曲的 (1/3)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112424/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-1.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112424/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-1.jpg",
         "originalBytes": 357724400,
         "bytes": 6408211,
         "pages": {
@@ -647,8 +738,9 @@
         }
       },
       {
-        "title": "1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的 (2/3)",
+        "title": "1SHENZHEN Pride Catalog 2027-INSTRUMENTS转曲的 (2/3)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112443/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-2.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112443/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-2.jpg",
         "originalBytes": 357724400,
         "bytes": 7213712,
         "pages": {
@@ -657,8 +749,9 @@
         }
       },
       {
-        "title": "1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的 (3/3)",
+        "title": "1SHENZHEN Pride Catalog 2027-INSTRUMENTS转曲的 (3/3)",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112473/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-3.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112473/brochures/pride/1shenzhen-pride-catalog-2027-instruments-part-3.jpg",
         "originalBytes": 357724400,
         "bytes": 8853653,
         "pages": {
@@ -674,12 +767,13 @@
     "description": "UPS",
     "logo": {
       "id": "logos/reros",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118012/logos/reros"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118012/logos/reros"
     },
     "brochures": [
       {
         "title": "Reros UPS Catalog",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112713/brochures/reros/reros-ups-catalog.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112713/brochures/reros/reros-ups-catalog.jpg",
         "originalBytes": 3636156,
         "bytes": 2127570
       }
@@ -697,54 +791,63 @@
       {
         "title": "Análisis no destructivo de metales",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112683/brochures/thermo-niton/xrf-niton-folleto-para-metales-esp-lr.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112683/brochures/thermo-niton/xrf-niton-folleto-para-metales-esp-lr.jpg",
         "originalBytes": 2128415,
         "bytes": 530632
       },
       {
         "title": "Analizadores Portátiles Niton XRF",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112687/brochures/thermo-niton/niton-handheld-xrf-alyzers-br-nitonxrf-es.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112687/brochures/thermo-niton/niton-handheld-xrf-alyzers-br-nitonxrf-es.jpg",
         "originalBytes": 5640341,
         "bytes": 521875
       },
       {
         "title": "Determination of platinum, palladium, and rhodium in spent automotive catalytic converters",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112668/brochures/thermo-niton/autocatalyticconverter-appnote.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112668/brochures/thermo-niton/autocatalyticconverter-appnote.jpg",
         "originalBytes": 4515921,
         "bytes": 440946
       },
       {
         "title": "Exploración Minera Soluciones desde las primeras etapas de descubrimiento hasta el procesamiento del mineral",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112678/brochures/thermo-niton/xrf-mining-brochure-spanish.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112678/brochures/thermo-niton/xrf-mining-brochure-spanish.jpg",
         "originalBytes": 3285492,
         "bytes": 1866159
       },
       {
         "title": "Thermo Scientific Niton DXL Precious Metal Analyzer",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112671/brochures/thermo-niton/dxl-spec-sheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112671/brochures/thermo-niton/dxl-spec-sheet.jpg",
         "originalBytes": 712983,
         "bytes": 121185
       },
       {
         "title": "Thermo Scientific Niton XL2 100G XRF Analyzer",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112676/brochures/thermo-niton/xl2-100g-spec-schet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112676/brochures/thermo-niton/xl2-100g-spec-schet.jpg",
         "originalBytes": 1223169,
         "bytes": 271344
       },
       {
         "title": "Thermo Scientific Niton XL2 XRF Precious Metal Analyzer",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112673/brochures/thermo-niton/niton-xl2-100-precious-metals-spec-sheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112673/brochures/thermo-niton/niton-xl2-100-precious-metals-spec-sheet.jpg",
         "originalBytes": 674597,
         "bytes": 139589
       },
       {
         "title": "Thermo Scientific Niton XL3t GOLDD XRF Analyzer",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112675/brochures/thermo-niton/niton-xl3t-goldd-spec-sheet-2013jan15.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112675/brochures/thermo-niton/niton-xl3t-goldd-spec-sheet-2013jan15.jpg",
         "originalBytes": 1126088,
         "bytes": 103204
       },
       {
         "title": "X-Ray Energy Reference",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112669/brochures/thermo-niton/cad-niton-periodictable-fxl.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112669/brochures/thermo-niton/cad-niton-periodictable-fxl.jpg",
         "originalBytes": 1730285,
         "bytes": 280354
       }
@@ -756,42 +859,48 @@
     "description": "Instrumentos de laboratorio de alta gama",
     "logo": {
       "id": "logos/xrf-technology",
-      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_trim/c_fit,h_160/e_make_transparent:10/f_auto,q_auto/v1792118016/logos/xrf-technology"
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118016/logos/xrf-technology"
     },
     "brochures": [
       {
-        "title": "AUTOMATED SAMPLE DIVIDER",
+        "title": "Automated Sample Divider",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112694/brochures/xrf-scientific/orbis-rsd-lsd-brochure-reduced-size.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112694/brochures/xrf-scientific/orbis-rsd-lsd-brochure-reduced-size.jpg",
         "originalBytes": 963178,
         "bytes": 743843
       },
       {
-        "title": "CARBON SULPHUR ANALYSIS",
+        "title": "Carbon Sulphur Analysis",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112690/brochures/xrf-scientific/cs-1232-carbon-sulphur-analyser-brochure-reduced-size.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112690/brochures/xrf-scientific/cs-1232-carbon-sulphur-analyser-brochure-reduced-size.jpg",
         "originalBytes": 651928,
         "bytes": 645043
       },
       {
-        "title": "PHOENIX GO SERIES GAS FUSION MACHINE",
+        "title": "Phoenix GO Series Gas Fusion Machine",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112699/brochures/xrf-scientific/xrf-23007-fl-a4-6seiter-machines-phoenix-go-en-v01.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112699/brochures/xrf-scientific/xrf-23007-fl-a4-6seiter-machines-phoenix-go-en-v01.jpg",
         "originalBytes": 1038142,
         "bytes": 735260
       },
       {
-        "title": "THERMOGRAVIMETRIC ANALYSIS",
+        "title": "Thermogravimetric Analysis",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112706/brochures/xrf-scientific/xrtga-1100-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112706/brochures/xrf-scientific/xrtga-1100-brochure.jpg",
         "originalBytes": 1955647,
         "bytes": 706293
       },
       {
-        "title": "ULTRA PERFORMANCE LABORATORY JAW CRUSHERS",
+        "title": "Ultra Performance Laboratory Jaw Crushers",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112697/brochures/xrf-scientific/orbis-range-brochure-sept-2026-compressed.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112697/brochures/xrf-scientific/orbis-range-brochure-sept-2026-compressed.jpg",
         "originalBytes": 1143962,
         "bytes": 764982
       },
       {
         "title": "XrFuse 6 ELECTRIC FUSION MACHINE",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112701/brochures/xrf-scientific/xrf-24003-fl-a4-6seiter-machines-xrfuse6-en-final-web.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112701/brochures/xrf-scientific/xrf-24003-fl-a4-6seiter-machines-xrfuse6-en-final-web.jpg",
         "originalBytes": 1204489,
         "bytes": 1203643
       }
