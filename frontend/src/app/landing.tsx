@@ -206,6 +206,11 @@ function Brands() {
             width={160}
             height={80}
             unoptimized
+            // Eager, not lazy: the marquee's second copy starts off screen, so
+            // lazy logos there stayed at the 160px placeholder width while the
+            // first copy loaded at real width. Unequal copies left a gap
+            // before the loop reset.
+            loading="eager"
             className="h-20 w-auto object-contain mx-8"
           />
         ))}
