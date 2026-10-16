@@ -14,8 +14,8 @@ const en = {
   about: {
     title: "About",
     paragraphs: [
-      "TECSIS IS A STRATEGIC PARTNER IN QUALITY AND PROCESS CONTROL, ASSET PROTECTION, AND MATERIAL ANALYSIS.",
-      "FOR THE PAST 35 YEARS, WE HAVE BEEN PROVIDING STATE-OF-THE-ART SOLUTIONS TO THE MINING, ENERGY, CHEMICAL, METALLURGICAL, OIL & GAS, UNIVERSITY, CIRCULAR ECONOMY, PHARMACEUTICAL, AND ENVIRONMENTAL SECTORS.",
+      "Tecsis is a strategic partner in quality and process control, asset protection, and material analysis.",
+      "For the past 35 years, we have been providing state-of-the-art solutions to the mining, energy, chemical, metallurgical, oil & gas, university, circular economy, pharmaceutical, and environmental sectors.",
     ],
   },
   services: [
@@ -105,8 +105,8 @@ const es: Content = {
   about: {
     title: "Nosotros",
     paragraphs: [
-      "TECSIS ES UN ALIADO ESTRATEGICO EN EL CONTROL DE CALIDAD Y PROCESOS, PROTECCION DE ACTIVOS Y ANALISIS DE MATERIALES.",
-      "DESDE HACE 35 AÑOS, DAMOS SOLUCIONES DE ULTIMA GENERACION A LA INDUSTRIA MINERA, ENERGETICA, QUIMICA, METALURGICA, OIL&GAS, UNIVERSIDADES, ECONOMIA CIRCULAR, FARMACEUTICAS, MEDIOAMBIENTAL.",
+      "Tecsis es un aliado estratégico en el control de calidad y procesos, protección de activos y análisis de materiales.",
+      "Desde hace 35 años, damos soluciones de última generación a la industria minera, energética, química, metalúrgica, oil & gas, universidades, economía circular, farmacéuticas, medioambiental.",
     ],
   },
   services: [

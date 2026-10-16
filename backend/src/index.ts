@@ -9,7 +9,10 @@ import { logError } from "./lib/errorLog.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 const app = express();
-app.set("trust proxy", 1);
+// How many proxies sit in front of the server, so req.ip (and so the rate
+// limit) is the visitor's IP. 1 locally (the Next dev server); 2 on Render
+// behind Vercel's rewrite (Vercel + Render's load balancer).
+app.set("trust proxy", Number(process.env.TRUST_PROXY_HOPS ?? 1));
 const PORT = Number(process.env.PORT ?? 4000);
 const MONGO_URL = process.env.MONGO_URL;
 
