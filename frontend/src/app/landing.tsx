@@ -70,14 +70,10 @@ export default function Landing() {
             ))}
             <p>{"]"}</p>
           </div>
-          <div className="flex gap-x-3">
-            <button className="h-12 px-6 rounded-full bg-[#122991] text-white">
-              {text.hero.primaryCta}
-            </button>
-            <button className="h-12 px-6 rounded-full bg-[#f3f4fa] text-black">
-              {text.hero.secondaryCta}
-            </button>
-          </div>
+          {/* Width of the two buttons this replaced (px-6 each + gap-x-3). */}
+          <button className="w-full sm:w-66 h-12 px-6 rounded-full bg-[#122991] text-white">
+            {text.hero.primaryCta}
+          </button>
         </div>
       </Hero>
       <Brands />

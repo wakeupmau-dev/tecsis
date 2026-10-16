@@ -10,7 +10,6 @@ const en = {
     title: "We stand behind the technology the industry measures with.",
     categories: ["Process control", "Quality control", "Materials research"],
     primaryCta: "Learn more",
-    secondaryCta: "Learn more",
   },
   about: {
     title: "About",
@@ -102,7 +101,6 @@ const es: Content = {
       "Investigación de materiales",
     ],
     primaryCta: "Saber más",
-    secondaryCta: "Saber más",
   },
   about: {
     title: "Nosotros",
