@@ -66,6 +66,15 @@ const en = {
       failed: "Something went wrong. Try again.",
     },
   },
+  helpForm: {
+    title: "Let's get in touch",
+    nameLabel: "name",
+    companyLabel: "company",
+    roleLabel: "position",
+    emailLabel: "email",
+    submit: "Submit",
+    open: "Contact us",
+  },
 };
 
 export type Content = typeof en;
@@ -139,6 +148,15 @@ const es: Content = {
       limited: "Demasiados intentos. Inténtelo más tarde.",
       failed: "Algo salió mal. Inténtelo de nuevo.",
     },
+  },
+  helpForm: {
+    title: "Pongámonos en contacto",
+    nameLabel: "nombre",
+    companyLabel: "empresa",
+    roleLabel: "cargo",
+    emailLabel: "correo",
+    submit: "Enviar",
+    open: "Contáctenos",
   },
 };
 

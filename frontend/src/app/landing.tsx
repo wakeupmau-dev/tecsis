@@ -2,6 +2,7 @@
 
 import { CircleArrowUp, CircleCheck, Dot, Send } from "lucide-react";
 import Grainient from "@/components/Grainient";
+import Input from "@/components/Input";
 import PixelSwap from "@/components/PixelSwap";
 import Topbar from "@/components/Topbar";
 import { Globe } from "@/components/ui/globe";
@@ -180,35 +181,6 @@ async function submitLead(email: string, locale: Locale): Promise<LeadResult> {
   } catch {
     return "failed";
   }
-}
-
-function Input({
-  name,
-  label,
-  type = "text",
-}: {
-  name: string;
-  label: string;
-  type?: string;
-}) {
-  return (
-    <div className="relative w-full flex flex-col gap-y-1">
-      <label
-        className="px-6 text-[0.9rem] capitalize font-medium text-[#323232] whitespace-nowrap"
-        htmlFor={name}
-      >
-        {label}
-      </label>
-      <div className="flex items-end">
-        <input
-          id={name}
-          name={name}
-          className="w-full outline-0 h-15 px-5 bg-[#f3f4fa] rounded-full"
-          type={type}
-        />
-      </div>
-    </div>
-  );
 }
 
 // "logos/bruel-kjaer" → "Bruel Kjaer", for the alt text.
