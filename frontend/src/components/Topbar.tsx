@@ -136,10 +136,12 @@ function TopbarContent({
             ))}
           </div>
         )}
-        <button className="ml-4" onClick={handleLocaleClick}>
-          <span className={locale === "en" ? "" : "text-gray-500"}>En</span>
-          <span className="text-gray-500">/</span>
-          <span className={locale === "es" ? "" : "text-gray-500"}>Es</span>
+        <button
+          className="ml-4 h-8 px-3 border border-[#c9c9cf] rounded-md"
+          onClick={handleLocaleClick}
+          aria-label={locale === "es" ? "Cambiar a inglés" : "Switch to Spanish"}
+        >
+          {locale === "es" ? "Es" : "En"}
         </button>
       </div>
     </div>

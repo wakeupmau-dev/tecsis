@@ -15,8 +15,8 @@ const en = {
   about: {
     title: "About",
     paragraphs: [
-      "Tecsis is a partner in process control, quality control, and materials research. For 35 years, we’ve brought state-of-the-art analytical instruments to research and academia, mining and materials, energy, chemicals, and environmental monitoring.",
-      "Our technical team is trained directly by the manufacturers we represent, so when your equipment needs installation, maintenance, or expert guidance, you get support straight from the source.",
+      "TECSIS IS A STRATEGIC PARTNER IN QUALITY AND PROCESS CONTROL, ASSET PROTECTION, AND MATERIAL ANALYSIS.",
+      "FOR THE PAST 35 YEARS, WE HAVE BEEN PROVIDING STATE-OF-THE-ART SOLUTIONS TO THE MINING, ENERGY, CHEMICAL, METALLURGICAL, OIL & GAS, UNIVERSITY, CIRCULAR ECONOMY, PHARMACEUTICAL, AND ENVIRONMENTAL SECTORS.",
     ],
   },
   services: [
@@ -25,12 +25,6 @@ const en = {
       section: "Sales",
       description:
         "Analytical and measurement instruments from the brands we represent.",
-    },
-    {
-      id: 2,
-      section: "Rental",
-      description:
-        "Access the equipment you need, for as long as you need it, without buying it.",
     },
     {
       id: 3,
@@ -95,8 +89,8 @@ const es: Content = {
   about: {
     title: "Nosotros",
     paragraphs: [
-      "Tecsis es un aliado en control de procesos, control de calidad e investigación de materiales. Desde hace 35 años, llevamos instrumentación analítica de última generación a la academia y la investigación, la minería y los materiales, la energía, la química y el monitoreo ambiental.",
-      "Nuestro equipo técnico se capacita directamente con los fabricantes que representamos, para que la instalación, el mantenimiento y la asesoría de sus equipos cuenten con respaldo de primera mano.",
+      "TECSIS ES UN ALIADO ESTRATEGICO EN EL CONTROL DE CALIDAD Y PROCESOS, PROTECCION DE ACTIVOS Y ANALISIS DE MATERIALES.",
+      "DESDE HACE 35 AÑOS, DAMOS SOLUCIONES DE ULTIMA GENERACION A LA INDUSTRIA MINERA, ENERGETICA, QUIMICA, METALURGICA, OIL&GAS, UNIVERSIDADES, ECONOMIA CIRCULAR, FARMACEUTICAS, MEDIOAMBIENTAL.",
     ],
   },
   services: [
@@ -105,12 +99,6 @@ const es: Content = {
       section: "Venta",
       description:
         "Instrumentos de análisis y medición de las marcas que representamos.",
-    },
-    {
-      id: 2,
-      section: "Arriendo",
-      description:
-        "Acceda al equipo que necesita, por el tiempo que lo necesite, sin tener que comprarlo.",
     },
     {
       id: 3,

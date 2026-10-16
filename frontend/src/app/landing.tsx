@@ -327,7 +327,7 @@ function Section({
   return (
     <div id={id} className="w-full">
       {/* Title */}
-      <div className="w-full h-12 flex justify-between items-center px-3 border-t border-x sm:rounded-t-2xl">
+      <div className="w-full h-12 flex justify-between items-center px-3 border-t border-x border-[#c9c9cf] sm:rounded-t-2xl">
         <h2 className="uppercase">{title}</h2>
         <Dot className="w-6 h-6" />
       </div>
@@ -343,7 +343,7 @@ function Section({
         </div>
       </div>
 
-      <div className="w-full h-12 flex justify-end items-center px-3 border-b border-x sm:rounded-b-2xl">
+      <div className="w-full h-12 flex justify-end items-center px-3 border-b border-x border-[#c9c9cf] sm:rounded-b-2xl">
         <Dot className="w-6 h-6" />
       </div>
     </div>
@@ -394,6 +394,8 @@ function Services({ services }: { services: Content["services"] }) {
           trigger="hover"
         />
       ))}
+      {/* Fills the slot the five services leave empty in the 2- and 3-column layouts. */}
+      <div aria-hidden="true" className="hidden sm:block aspect-square bg-[#c4cae4]" />
     </div>
   );
 }
