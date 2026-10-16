@@ -9,6 +9,34 @@ import { content, type Locale } from "@/content";
 const LABEL_CLASS = "font-light text-[#595959]";
 const AUTO_OPEN_DELAY_MS = 5000;
 const AUTO_OPENED_KEY = "tecsis:help-form-auto-opened";
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+type ContactResult = "saved" | "invalid" | "limited" | "failed";
+
+async function submitContact(
+  form: FormData,
+  locale: Locale,
+): Promise<ContactResult> {
+  try {
+    const res = await fetch("/api/leads/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.get("name"),
+        company: form.get("company"),
+        role: form.get("role"),
+        email: form.get("email"),
+        locale,
+      }),
+    });
+    if (res.ok) return "saved";
+    if (res.status === 400) return "invalid";
+    if (res.status === 429) return "limited";
+    return "failed";
+  } catch {
+    return "failed";
+  }
+}
 
 // Storage can be blocked (private mode, disabled site data); treat that as
 // "not seen yet" and skip the write.
@@ -28,6 +56,8 @@ function writeFlag(key: string) {
 
 export default function HelpButton({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
+  const [result, setResult] = useState<ContactResult | null>(null);
+  const [submitting, setSubmitting] = useState(false);
   const text = content[locale].helpForm;
 
   // First visit only: open the form by itself after a few seconds.
@@ -50,9 +80,21 @@ export default function HelpButton({ locale }: { locale: Locale }) {
     setOpen(!open);
   }
 
-  // Not wired to the backend yet.
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    if (!EMAIL_REGEX.test(String(data.get("email") ?? "").trim())) {
+      setResult("invalid");
+      return;
+    }
+
+    setResult(null);
+    setSubmitting(true);
+    const next = await submitContact(data, locale);
+    setSubmitting(false);
+    setResult(next);
+    if (next === "saved") form.reset();
   }
 
   return (
@@ -96,10 +138,20 @@ export default function HelpButton({ locale }: { locale: Locale }) {
             />
             <button
               type="submit"
-              className="mt-2 h-15 rounded-full bg-[#122991] text-white"
+              disabled={submitting}
+              className={`mt-2 h-15 rounded-full bg-[#122991] text-white flex items-center justify-center gap-x-2 ${submitting ? "opacity-50 cursor-not-allowed" : ""}`}
             >
-              {text.submit}
+              {submitting && (
+                <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
+              )}
+              {result === "saved" ? text.submitted : text.submit}
             </button>
+            <p
+              aria-live="polite"
+              className={`min-h-6 px-6 text-[0.9rem] ${result === "saved" ? "text-gray-800" : "text-red-600"}`}
+            >
+              {result && text.messages[result]}
+            </p>
           </motion.form>
         )}
       </AnimatePresence>

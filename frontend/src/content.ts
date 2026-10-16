@@ -73,7 +73,14 @@ const en = {
     roleLabel: "position",
     emailLabel: "email",
     submit: "Submit",
+    submitted: "Sent",
     open: "Contact us",
+    messages: {
+      saved: "Thanks! We'll be in touch soon.",
+      invalid: "That email doesn't look right.",
+      limited: "Too many attempts. Try again later.",
+      failed: "Something went wrong. Try again.",
+    },
   },
   notFound: {
     message: "Page not found",
@@ -159,7 +166,14 @@ const es: Content = {
     roleLabel: "cargo",
     emailLabel: "correo",
     submit: "Enviar",
+    submitted: "Enviado",
     open: "Contáctenos",
+    messages: {
+      saved: "¡Gracias! Nos pondremos en contacto pronto.",
+      invalid: "Ese correo no parece válido.",
+      limited: "Demasiados intentos. Inténtelo más tarde.",
+      failed: "Algo salió mal. Inténtelo de nuevo.",
+    },
   },
   notFound: {
     message: "Página no encontrada",
