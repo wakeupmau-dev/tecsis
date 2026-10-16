@@ -7,6 +7,7 @@ import PixelSwap from "@/components/PixelSwap";
 import Topbar from "@/components/Topbar";
 import { Globe } from "@/components/ui/globe";
 import Image from "next/image";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
@@ -71,9 +72,12 @@ export default function Landing() {
             <p>{"]"}</p>
           </div>
           {/* Width of the two buttons this replaced (px-6 each + gap-x-3). */}
-          <button className="w-full sm:w-66 h-12 px-6 rounded-full bg-[#122991] text-white">
+          <Link
+            href="/products"
+            className="w-full sm:w-66 h-12 px-6 rounded-full bg-[#122991] text-white flex items-center justify-center"
+          >
             {text.hero.primaryCta}
-          </button>
+          </Link>
         </div>
       </Hero>
       <Brands />
