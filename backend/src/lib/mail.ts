@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { mailFrom, productsUrl, resendApiKey } from "../config/mail.js";
+import { mailFrom, productsUrl, replyTo, resendApiKey } from "../config/mail.js";
 
 export type Locale = "en" | "es";
 
@@ -40,6 +40,7 @@ export async function sendProductsEmail(
   try {
     const { data, error } = await getClient().emails.send({
       from: mailFrom(),
+      replyTo: replyTo(),
       to: [to],
       subject,
       text: `${intro}\n${url}\n\n${outro}`,

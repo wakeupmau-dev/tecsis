@@ -8,6 +8,11 @@ export function mailFrom() {
   return process.env.MAIL_FROM ?? "Tecsis <onboarding@resend.dev>";
 }
 
+// Where replies go. Optional: without it, replies go to MAIL_FROM.
+export function replyTo() {
+  return process.env.REPLY_TO || undefined;
+}
+
 export function productsUrl() {
   return process.env.PRODUCTS_URL ?? "https://example.com/products";
 }
