@@ -1,14 +1,19 @@
 "use client";
 
-import { MessageCircleQuestionMark } from "lucide-react";
+import { CircleCheck, MessageCircleQuestionMark } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import Input from "@/components/Input";
 import { content, type Locale } from "@/content";
 
 const LABEL_CLASS = "font-light text-[#595959]";
 const AUTO_OPEN_DELAY_MS = 5000;
 const AUTO_OPENED_KEY = "tecsis:help-form-auto-opened";
+// Success sequence: the green circle grows over the form, the check grows
+// in after it, then the form closes.
+const CIRCLE_DURATION_S = 0.5;
+const CHECK_DELAY_S = 0.2;
+const CLOSE_DELAY_MS = 1500;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type ContactResult = "saved" | "invalid" | "limited" | "failed";
@@ -58,6 +63,8 @@ export default function HelpButton({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false);
   const [result, setResult] = useState<ContactResult | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [circleDone, setCircleDone] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const text = content[locale].helpForm;
 
   // First visit only: open the form by itself after a few seconds.
@@ -77,7 +84,26 @@ export default function HelpButton({ locale }: { locale: Locale }) {
 
   function toggle() {
     writeFlag(AUTO_OPENED_KEY);
+    clearTimeout(closeTimer.current);
     setOpen(!open);
+  }
+
+  function handleCircleDone() {
+    setCircleDone(true);
+  }
+
+  function handleCheckDone() {
+    closeTimer.current = setTimeout(close, CLOSE_DELAY_MS);
+  }
+
+  function close() {
+    setOpen(false);
+  }
+
+  // Once the form is gone, start the next opening from a clean form.
+  function handleExitComplete() {
+    setResult(null);
+    setCircleDone(false);
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -99,7 +125,7 @@ export default function HelpButton({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         {open && (
           <motion.form
             onSubmit={handleSubmit}
@@ -112,7 +138,7 @@ export default function HelpButton({ locale }: { locale: Locale }) {
             }}
             exit={{ opacity: 0, y: 16, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm origin-bottom-right flex flex-col gap-y-4 p-6 bg-white rounded-2xl shadow-xl"
+            className="fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-sm origin-bottom-right flex flex-col gap-y-4 p-6 bg-white rounded-2xl shadow-xl overflow-hidden"
           >
             <h2 className="mb-4 text-card">{text.title}</h2>
             <Input
@@ -144,14 +170,48 @@ export default function HelpButton({ locale }: { locale: Locale }) {
               {submitting && (
                 <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
               )}
-              {result === "saved" ? text.submitted : text.submit}
+              {text.submit}
             </button>
             <p
               aria-live="polite"
-              className={`min-h-6 px-6 text-[0.9rem] ${result === "saved" ? "text-gray-800" : "text-red-600"}`}
+              className="min-h-6 px-6 text-[0.9rem] text-red-600"
             >
-              {result && text.messages[result]}
+              {result && result !== "saved" && text.messages[result]}
             </p>
+            {result === "saved" && (
+              <div
+                role="status"
+                aria-label={text.messages.saved}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                {/* Wider than the form's diagonal, so at full size it covers every corner. */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{
+                    duration: CIRCLE_DURATION_S,
+                    ease: "easeInOut",
+                  }}
+                  onAnimationComplete={handleCircleDone}
+                  className="absolute shrink-0 aspect-square w-[250%] rounded-full bg-green-600"
+                />
+                {circleDone && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      delay: CHECK_DELAY_S,
+                      duration: 0.3,
+                      ease: "easeOut",
+                    }}
+                    onAnimationComplete={handleCheckDone}
+                    className="relative text-white"
+                  >
+                    <CircleCheck className="size-16" />
+                  </motion.div>
+                )}
+              </div>
+            )}
           </motion.form>
         )}
       </AnimatePresence>

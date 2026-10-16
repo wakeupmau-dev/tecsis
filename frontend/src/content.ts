@@ -73,7 +73,6 @@ const en = {
     roleLabel: "position",
     emailLabel: "email",
     submit: "Submit",
-    submitted: "Sent",
     open: "Contact us",
     messages: {
       saved: "Thanks! We'll be in touch soon.",
@@ -166,7 +165,6 @@ const es: Content = {
     roleLabel: "cargo",
     emailLabel: "correo",
     submit: "Enviar",
-    submitted: "Enviado",
     open: "Contáctenos",
     messages: {
       saved: "¡Gracias! Nos pondremos en contacto pronto.",
