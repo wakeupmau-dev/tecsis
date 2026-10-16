@@ -12,6 +12,7 @@ import { basename, extname, join, relative, sep } from "node:path";
 import { promisify } from "node:util";
 import { v2 as cloudinary } from "cloudinary";
 import { brochureCatalog } from "./brochureCatalog.js";
+import { brochureTitles } from "./brochureTitles.js";
 
 const run = promisify(execFile);
 
@@ -48,6 +49,9 @@ const SPLITS = new Map([["brochures/pride/1shenzhen-pride-catalog-2027-instrumen
 const SKIP = new Set([
   "brochures/pride/pride-r",
   "brochures/pride/pride-iso-certificate",
+  // A price quote and a letter to representatives, not brochures. To confirm.
+  "brochures/hipotronics/32061209-mta-150-61209",
+  "brochures/hipotronics/700-di-letter-to-representatives",
 ]);
 
 function collectPdfs(dir: string): string[] {
@@ -90,15 +94,18 @@ function describe(file: string, hash: string): Brochure | null {
   const entry = catalogByFolder.get(folder.toLowerCase());
   if (!entry) return null;
 
-  const title = basename(file, extname(file));
+  // The public id stays derived from the file name, so retitling never
+  // changes what is in Cloudinary; the title shown comes from brochureTitles.
+  const fileName = basename(file, extname(file));
+  const publicId = `brochures/${slugify(entry.brand)}/${slugify(fileName)}`;
   return {
     file,
     folder,
     brand: entry.brand,
     description: entry.description,
     logo: entry.logo,
-    title,
-    publicId: `brochures/${slugify(entry.brand)}/${slugify(title)}`,
+    title: brochureTitles[publicId] ?? fileName,
+    publicId,
     originalBytes: statSync(file).size,
     sourceHash: hash.slice(0, 16),
   };

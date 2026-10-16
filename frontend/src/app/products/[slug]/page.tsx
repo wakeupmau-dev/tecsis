@@ -28,6 +28,15 @@ export default async function BrandPage({
     <>
       <ProductsTopbar />
       <h1>{brand.brand}</h1>
+      <ul>
+        {brand.brochures.map((brochure) => (
+          <li key={brochure.url}>
+            <a href={brochure.url} target="_blank" rel="noopener noreferrer">
+              {brochure.title}
+            </a>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
