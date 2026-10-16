@@ -75,6 +75,9 @@ const en = {
     submit: "Submit",
     open: "Contact us",
   },
+  notFound: {
+    message: "Page not found",
+  },
 };
 
 export type Content = typeof en;
@@ -157,6 +160,9 @@ const es: Content = {
     emailLabel: "correo",
     submit: "Enviar",
     open: "Contáctenos",
+  },
+  notFound: {
+    message: "Página no encontrada",
   },
 };
 
