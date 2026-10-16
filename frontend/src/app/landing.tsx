@@ -8,6 +8,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
+import logos from "@/data/logos.json";
 import {
   useEffect,
   useRef,
@@ -370,18 +371,14 @@ function NavButton({
   );
 }
 
-const brands = [
-  { name: "Power Standards Lab", src: "/logos/logo_01.png" },
-  { name: "Moser-Glaser", src: "/logos/logo_02.jpg" },
-  { name: "Instron", src: "/logos/logo_03.png" },
-  { name: "Soft Noise", src: "/logos/logo_04.png" },
-  { name: "Thermo Scientific", src: "/logos/logo_05.png" },
-  { name: "Bruel & Kjaer", src: "/logos/logo_06.jpg" },
-  { name: "Hipotronics", src: "/logos/logo_08.png" },
-  { name: "xrf", src: "/logos/logo_09.png" },
-  { name: "Optica Italy", src: "/logos/logo_10.png" },
-  { name: "Refatek", src: "/logos/logo_11.png" },
-];
+// "logos/bruel-kjaer" → "Bruel Kjaer", for the alt text.
+function logoName(id: string) {
+  return id
+    .slice(id.lastIndexOf("/") + 1)
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 function Brands() {
   return (
@@ -393,13 +390,14 @@ function Brands() {
         gradientColor="#F6F7FF"
         speed={40}
       >
-        {brands.map((brand) => (
+        {logos.map((logo) => (
           <Image
-            key={brand.name}
-            src={brand.src}
-            alt={brand.name}
+            key={logo.id}
+            src={logo.url}
+            alt={logoName(logo.id)}
             width={160}
             height={80}
+            unoptimized
             className="h-20 w-auto object-contain mx-8"
           />
         ))}

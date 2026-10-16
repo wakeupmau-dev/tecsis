@@ -8,7 +8,8 @@
     "start": "node --env-file=.env dist/index.js",
     "build": "tsc",
     "bootstrap": "tsx --env-file=.env src/scripts/bootstrap.ts",
-    "brochures": "tsx --env-file=.env src/scripts/uploadBrochures.ts"
+    "brochures": "tsx --env-file=.env src/scripts/uploadBrochures.ts",
+    "logos": "tsx --env-file=.env src/scripts/uploadLogos.ts"
   },
   "keywords": [],
   "author": "",
