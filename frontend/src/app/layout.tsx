@@ -14,7 +14,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" className={rubik.variable}>
-      <body>{children}</body>
+      <body>
+        <main className="min-h-screen flex justify-center bg-bg-light pt-5 pb-20">
+          <div className="w-full max-w-280 flex flex-col gap-y-5 sm:px-5 min-[70rem]:px-0">
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

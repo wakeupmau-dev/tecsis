@@ -3,20 +3,14 @@
 import { CircleArrowUp, CircleCheck, Dot, Send } from "lucide-react";
 import Grainient from "@/components/Grainient";
 import PixelSwap from "@/components/PixelSwap";
+import Topbar from "@/components/Topbar";
 import { Globe } from "@/components/ui/globe";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
 import logos from "@/data/logos.json";
-import tecsisLogo from "@/data/tecsis-logo.json";
-import {
-  useEffect,
-  useRef,
-  useState,
-  type FormEvent,
-  type ReactNode,
-} from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 
 export default function Landing() {
   const [locale, setLocale] = useState<Locale>("es");
@@ -57,104 +51,102 @@ export default function Landing() {
   }
 
   return (
-    <main className="min-h-screen flex justify-center bg-bg-light pt-5 pb-20">
-      <div className="w-full max-w-280 flex flex-col gap-y-5 sm:px-5 min-[70rem]:px-0">
-        <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
-        <Hero globe>
-          <div className="flex flex-col justify-end gap-y-6">
-            <h1 className="text-display text-balance capitalize">
-              {text.hero.title}
-            </h1>
-            <div
-              className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.65rem] sm:text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
-            >
-              <p>{"["}</p>
-              {text.hero.categories.map((el, index) => (
-                <p className="uppercase" key={el}>
-                  {index < text.hero.categories.length - 1 ? `${el},` : el}
-                </p>
-              ))}
-              <p>{"]"}</p>
-            </div>
-            <div className="flex gap-x-3">
-              <button className="h-12 px-6 rounded-full bg-[#122991] text-white">
-                {text.hero.primaryCta}
-              </button>
-              <button className="h-12 px-6 rounded-full bg-[#f3f4fa] text-black">
-                {text.hero.secondaryCta}
-              </button>
-            </div>
+    <>
+      <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
+      <Hero globe>
+        <div className="flex flex-col justify-end gap-y-6">
+          <h1 className="text-display text-balance capitalize">
+            {text.hero.title}
+          </h1>
+          <div
+            className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.65rem] sm:text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
+          >
+            <p>{"["}</p>
+            {text.hero.categories.map((el, index) => (
+              <p className="uppercase" key={el}>
+                {index < text.hero.categories.length - 1 ? `${el},` : el}
+              </p>
+            ))}
+            <p>{"]"}</p>
           </div>
-        </Hero>
-        <Brands />
-        <Section
-          id="about"
-          title={text.about.title}
-          paragraphs={text.about.paragraphs}
-        />
-        <Services services={text.services} />
-        <Hero
-          id="contact"
-          className="py-25"
-          centered
-          height="auto"
-          position="right"
-        >
-          <div className="flex flex-col justify-start gap-y-10">
-            <h1 className="text-title text-balance capitalize">
-              {text.contact.title}
-            </h1>
-            <form className="flex items-end" onSubmit={handleSubmit}>
-              <motion.div
-                initial={false}
-                animate={
-                  submitted
-                    ? { flexGrow: 0, paddingRight: 0, opacity: 0 }
-                    : { flexGrow: 1, paddingRight: 12, opacity: 1 }
-                }
-                transition={SUBMIT_TRANSITION}
-                inert={submitted}
-                className="basis-0 min-w-0 overflow-hidden"
-              >
-                <Input
-                  name="email"
-                  label={text.contact.emailLabel}
-                  type="email"
-                />
-              </motion.div>
-              <motion.button
-                type="submit"
-                disabled={submitStatus === "loading" || submitted}
-                initial={false}
-                animate={{ flexGrow: submitted ? 1 : 0 }}
-                transition={SUBMIT_TRANSITION}
-                aria-label={submitted ? text.contact.submitted : text.contact.submit}
-                className={`${submitColor} shrink-0 basis-15 sm:basis-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
-              >
-                {submitStatus === "loading" && (
-                  <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
-                )}
-                {submitStatus === "success" && (
-                  <CircleCheck className="w-4 h-4" />
-                )}
-                {submitStatus !== "loading" && !submitted && (
-                  <Send className="w-5 h-5 sm:hidden" />
-                )}
-                <span className={submitted ? "" : "hidden sm:inline"}>
-                  {submitted ? text.contact.submitted : text.contact.submit}
-                </span>
-              </motion.button>
-            </form>
-            <p
-              aria-live="polite"
-              className={`min-h-6 px-6 text-[0.9rem] ${leadResult === "sent" ? "text-gray-800" : "text-red-600"}`}
-            >
-              {leadResult && text.contact.messages[leadResult]}
-            </p>
+          <div className="flex gap-x-3">
+            <button className="h-12 px-6 rounded-full bg-[#122991] text-white">
+              {text.hero.primaryCta}
+            </button>
+            <button className="h-12 px-6 rounded-full bg-[#f3f4fa] text-black">
+              {text.hero.secondaryCta}
+            </button>
           </div>
-        </Hero>
-      </div>
-    </main>
+        </div>
+      </Hero>
+      <Brands />
+      <Section
+        id="about"
+        title={text.about.title}
+        paragraphs={text.about.paragraphs}
+      />
+      <Services services={text.services} />
+      <Hero
+        id="contact"
+        className="py-25"
+        centered
+        height="auto"
+        position="right"
+      >
+        <div className="flex flex-col justify-start gap-y-10">
+          <h1 className="text-title text-balance capitalize">
+            {text.contact.title}
+          </h1>
+          <form className="flex items-end" onSubmit={handleSubmit}>
+            <motion.div
+              initial={false}
+              animate={
+                submitted
+                  ? { flexGrow: 0, paddingRight: 0, opacity: 0 }
+                  : { flexGrow: 1, paddingRight: 12, opacity: 1 }
+              }
+              transition={SUBMIT_TRANSITION}
+              inert={submitted}
+              className="basis-0 min-w-0 overflow-hidden"
+            >
+              <Input
+                name="email"
+                label={text.contact.emailLabel}
+                type="email"
+              />
+            </motion.div>
+            <motion.button
+              type="submit"
+              disabled={submitStatus === "loading" || submitted}
+              initial={false}
+              animate={{ flexGrow: submitted ? 1 : 0 }}
+              transition={SUBMIT_TRANSITION}
+              aria-label={submitted ? text.contact.submitted : text.contact.submit}
+              className={`${submitColor} shrink-0 basis-15 sm:basis-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
+            >
+              {submitStatus === "loading" && (
+                <span className="w-4 h-4 border-2 border-current/40 border-t-current rounded-full animate-spin" />
+              )}
+              {submitStatus === "success" && (
+                <CircleCheck className="w-4 h-4" />
+              )}
+              {submitStatus !== "loading" && !submitted && (
+                <Send className="w-5 h-5 sm:hidden" />
+              )}
+              <span className={submitted ? "" : "hidden sm:inline"}>
+                {submitted ? text.contact.submitted : text.contact.submit}
+              </span>
+            </motion.button>
+          </form>
+          <p
+            aria-live="polite"
+            className={`min-h-6 px-6 text-[0.9rem] ${leadResult === "sent" ? "text-gray-800" : "text-red-600"}`}
+          >
+            {leadResult && text.contact.messages[leadResult]}
+          </p>
+        </div>
+      </Hero>
+    </>
   );
 }
 
@@ -216,160 +208,6 @@ function Input({
         />
       </div>
     </div>
-  );
-}
-
-type NavItem = "home" | "about" | "contact";
-
-const navItems: NavItem[] = ["home", "about", "contact"];
-
-function scrollToItem(item: NavItem) {
-  if (item === "home") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
-  }
-  document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
-}
-
-function getActiveItem(): NavItem {
-  const atBottom =
-    window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight - 2;
-  if (atBottom) return "contact";
-
-  const line = window.innerHeight / 3;
-  let current: NavItem = "home";
-  for (const item of navItems) {
-    const element = document.getElementById(item);
-    if (element && element.getBoundingClientRect().top <= line) current = item;
-  }
-  return current;
-}
-
-type TopbarProps = {
-  nav: Content["nav"];
-  locale: Locale;
-  onLocaleChange: (locale: Locale) => void;
-};
-
-function Topbar({ nav, locale, onLocaleChange }: TopbarProps) {
-  const [active, setActive] = useState<NavItem>("home");
-  const [inView, setInView] = useState(true);
-  const topbarRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    function handleScroll() {
-      setActive(getActiveItem());
-    }
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const topbar = topbarRef.current;
-    if (!topbar) return;
-
-    function handleIntersect([entry]: IntersectionObserverEntry[]) {
-      setInView(entry.isIntersecting);
-    }
-
-    const observer = new IntersectionObserver(handleIntersect);
-    observer.observe(topbar);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <>
-      <div ref={topbarRef} className="hidden sm:block w-full">
-        <TopbarContent
-          active={active}
-          nav={nav}
-          locale={locale}
-          onLocaleChange={onLocaleChange}
-        />
-      </div>
-      {!inView && (
-        <div className="fixed top-0 inset-x-0 z-50 flex justify-center py-3 bg-bg-light">
-          <div className="w-full max-w-280 px-2 md:px-0">
-            <TopbarContent
-              active={active}
-              nav={nav}
-              locale={locale}
-              onLocaleChange={onLocaleChange}
-            />
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
-
-function TopbarContent({
-  active,
-  nav,
-  locale,
-  onLocaleChange,
-}: TopbarProps & { active: NavItem }) {
-  function handleLocaleClick() {
-    onLocaleChange(locale === "en" ? "es" : "en");
-  }
-
-  return (
-    <div className="flex justify-between items-center w-full">
-      <h1>
-        <Image
-          src={tecsisLogo.url}
-          alt="Tecsis"
-          width={949}
-          height={160}
-          priority
-          unoptimized
-          className="h-7 w-auto"
-        />
-      </h1>
-      <div className="flex gap-x-2 items-center">
-        <div className="hidden md:flex gap-x-2 items-center">
-          {navItems.map((item) => (
-            <NavButton
-              key={item}
-              item={item}
-              label={nav[item]}
-              active={item === active}
-              onSelect={scrollToItem}
-            />
-          ))}
-        </div>
-        <button className="ml-4" onClick={handleLocaleClick}>
-          <span className={locale === "en" ? "" : "text-gray-500"}>En</span>
-          <span className="text-gray-500">/</span>
-          <span className={locale === "es" ? "" : "text-gray-500"}>Es</span>
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function NavButton({
-  item,
-  label,
-  active,
-  onSelect,
-}: {
-  item: NavItem;
-  label: string;
-  active: boolean;
-  onSelect: (item: NavItem) => void;
-}) {
-  function handleClick() {
-    onSelect(item);
-  }
-
-  return (
-    <button className={active ? "" : "text-gray-500"} onClick={handleClick}>
-      {active ? `[ ${label} ]` : label}
-    </button>
   );
 }
 

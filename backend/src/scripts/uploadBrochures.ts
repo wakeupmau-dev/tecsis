@@ -295,6 +295,8 @@ type ManifestBrochure = {
 
 type ManifestBrand = {
   brand: string;
+  // URL-safe brand name for /products/<slug>; same slug as the Cloudinary folder.
+  slug: string;
   description: string;
   logo: { id: string; url: string };
   brochures: ManifestBrochure[];
@@ -333,6 +335,7 @@ async function writeManifest() {
       if (!logoUrl) missingLogos.add(brochure.logo);
       group = {
         brand: brochure.brand,
+        slug: slugify(brochure.brand),
         description: brochure.description,
         logo: { id: brochure.logo, url: logoUrl ?? "" },
         brochures: [],

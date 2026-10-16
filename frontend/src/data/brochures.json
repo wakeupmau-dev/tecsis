@@ -1,6 +1,7 @@
 [
   {
     "brand": "BRUEL&KJAER",
+    "slug": "bruel-kjaer",
     "description": "Equipos para mediciones acústicas",
     "logo": {
       "id": "logos/bruel-kjaer",
@@ -89,6 +90,7 @@
   },
   {
     "brand": "DANTEC DYNAMICS",
+    "slug": "dantec-dynamics",
     "description": "Equipos láser para análisis de mecánica de fluidos",
     "logo": {
       "id": "logos/dantec-dynamics",
@@ -117,6 +119,7 @@
   },
   {
     "brand": "ELECTRON",
+    "slug": "electron",
     "description": "Equipos de monitoreo de condición de transformadores",
     "logo": {
       "id": "logos/electron",
@@ -139,6 +142,7 @@
   },
   {
     "brand": "HAEFELY",
+    "slug": "haefely",
     "description": "Equipos para pruebas en transformadores",
     "logo": {
       "id": "logos/haefely",
@@ -383,6 +387,7 @@
   },
   {
     "brand": "HIGHTEST",
+    "slug": "hightest",
     "description": "Equipamiento para pruebas en transformadores",
     "logo": {
       "id": "logos/hightest",
@@ -399,6 +404,7 @@
   },
   {
     "brand": "HIPOTRONICS",
+    "slug": "hipotronics",
     "description": "Equipos de pruebas en cables y equipos de alta tensión",
     "logo": {
       "id": "logos/hipotronics",
@@ -553,6 +559,7 @@
   },
   {
     "brand": "LIGHTIGO",
+    "slug": "lightigo",
     "description": "Espectrómetros LIBS",
     "logo": {
       "id": "logos/lightigo",
@@ -587,6 +594,7 @@
   },
   {
     "brand": "POWERSIDE",
+    "slug": "powerside",
     "description": "Equipos para pruebas de calidad de energía",
     "logo": {
       "id": "logos/powerside",
@@ -633,6 +641,7 @@
   },
   {
     "brand": "PRIDE",
+    "slug": "pride",
     "description": "Equipos de ensayos y preparación de muestras",
     "logo": {
       "id": "logos/pride",
@@ -673,6 +682,7 @@
   },
   {
     "brand": "REROS",
+    "slug": "reros",
     "description": "UPS",
     "logo": {
       "id": "logos/reros",
@@ -689,6 +699,7 @@
   },
   {
     "brand": "THERMO NITON",
+    "slug": "thermo-niton",
     "description": "Espectrómetros portátiles de XRF",
     "logo": {
       "id": "logos/thermo-scientific",
@@ -753,6 +764,7 @@
   },
   {
     "brand": "XRF SCIENTIFIC",
+    "slug": "xrf-scientific",
     "description": "Instrumentos de laboratorio de alta gama",
     "logo": {
       "id": "logos/xrf-technology",
