@@ -1,18 +1,17 @@
 "use client";
 
 import { CircleArrowUp, CircleCheck, Dot, Send } from "lucide-react";
-import Grainient from "@/components/Grainient";
+import Hero, { HeroHeadline } from "@/components/Hero";
 import Input from "@/components/Input";
 import PixelSwap from "@/components/PixelSwap";
 import Topbar from "@/components/Topbar";
-import { Globe } from "@/components/ui/globe";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { motion } from "motion/react";
 import { content, type Content, type Locale } from "@/content";
 import logos from "@/data/logos.json";
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useState, type FormEvent } from "react";
 
 export default function Landing() {
   const [locale, setLocale] = useState<Locale>("es");
@@ -57,20 +56,7 @@ export default function Landing() {
       <Topbar nav={text.nav} locale={locale} onLocaleChange={setLocale} />
       <Hero globe>
         <div className="flex flex-col justify-end gap-y-6">
-          <h1 className="text-display text-balance capitalize">
-            {text.hero.title}
-          </h1>
-          <div
-            className={`flex items-center text-gray-800 gap-x-2 ${locale === "es" ? "text-[0.65rem] sm:text-[0.75rem] font-medium tracking-tight" : "text-[0.9rem]"}`}
-          >
-            <p>{"["}</p>
-            {text.hero.categories.map((el, index) => (
-              <p className="uppercase" key={el}>
-                {index < text.hero.categories.length - 1 ? `${el},` : el}
-              </p>
-            ))}
-            <p>{"]"}</p>
-          </div>
+          <HeroHeadline locale={locale} />
           {/* Width of the two buttons this replaced (px-6 each + gap-x-3). */}
           <Link
             href="/products"
@@ -122,7 +108,9 @@ export default function Landing() {
               initial={false}
               animate={{ flexGrow: submitted ? 1 : 0 }}
               transition={SUBMIT_TRANSITION}
-              aria-label={submitted ? text.contact.submitted : text.contact.submit}
+              aria-label={
+                submitted ? text.contact.submitted : text.contact.submit
+              }
               className={`${submitColor} shrink-0 basis-15 sm:basis-1/3 h-15 rounded-full flex items-center justify-center gap-x-2 transition-colors duration-300 ${submitStatus === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {submitStatus === "loading" && (
@@ -156,12 +144,7 @@ const SUBMIT_TRANSITION = { duration: 0.6, ease: "easeInOut" } as const;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type LeadResult =
-  | "sent"
-  | "notSent"
-  | "invalid"
-  | "exists"
-  | "limited"
-  | "failed";
+  "sent" | "notSent" | "invalid" | "exists" | "limited" | "failed";
 
 async function submitLead(email: string, locale: Locale): Promise<LeadResult> {
   try {
@@ -219,75 +202,6 @@ function Brands() {
           />
         ))}
       </Marquee>
-    </div>
-  );
-}
-
-function Hero({
-  id,
-  children,
-  position = "left",
-  height = "h-170",
-  centered = false,
-  globe = false,
-  className,
-}: {
-  id?: string;
-  children: ReactNode;
-  position?: "left" | "right";
-  height?: string;
-  centered?: boolean;
-  globe?: boolean;
-  className?: string;
-}) {
-  const grid = centered
-    ? "grid-cols-1 place-items-center"
-    : "grid-cols-1 md:grid-cols-2";
-
-  return (
-    <div
-      id={id}
-      className={`${height} relative isolate overflow-hidden w-full grid ${grid} sm:rounded-2xl p-10 ${className}`}
-    >
-      <div className="absolute inset-0 -z-10 opacity-45">
-        <Grainient
-          color1="#75aee6"
-          color2="#122991"
-          color3="#75aee6"
-          timeSpeed={0.25}
-          colorBalance={0}
-          warpStrength={1}
-          warpFrequency={5}
-          warpSpeed={2}
-          warpAmplitude={50}
-          blendAngle={0}
-          blendSoftness={0.05}
-          rotationAmount={500}
-          noiseScale={2}
-          grainAmount={0.1}
-          grainScale={2}
-          grainAnimated={false}
-          contrast={1.5}
-          gamma={1}
-          saturation={1}
-          centerX={0}
-          centerY={0}
-          zoom={0.9}
-        />
-      </div>
-      {globe && (
-        <Globe
-          className="-z-10 mix-blend-overlay opacity-50 w-[150vw] md:w-280 max-w-none left-1/2 right-auto mx-0 -translate-x-1/2"
-          speed={0.0005}
-        />
-      )}
-      {!centered && position === "right" && (
-        <div className="hidden md:block"></div>
-      )}
-      {children}
-      {!centered && position === "left" && (
-        <div className="hidden md:block"></div>
-      )}
     </div>
   );
 }
@@ -372,7 +286,10 @@ function Services({ services }: { services: Content["services"] }) {
         />
       ))}
       {/* Fills the slot the five services leave empty in the 2- and 3-column layouts. */}
-      <div aria-hidden="true" className="hidden sm:block aspect-square bg-[#c4cae4]" />
+      <div
+        aria-hidden="true"
+        className="hidden sm:block aspect-square bg-[#c4cae4]"
+      />
     </div>
   );
 }
