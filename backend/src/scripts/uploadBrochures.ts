@@ -18,6 +18,7 @@ const run = promisify(execFile);
 const ROOT = join(import.meta.dirname, "../../../Landing page FOREDE");
 const WORK_DIR = join(tmpdir(), "tecsis-brochures");
 const MANIFEST = join(import.meta.dirname, "../../../frontend/src/data/brochures.json");
+const LOGOS = join(import.meta.dirname, "../../../frontend/src/data/logos.json");
 
 // --only=haefely,electron limits a run to those brand slugs.
 const onlyArg = process.argv.find((arg) => arg.startsWith("--only="));
@@ -31,6 +32,7 @@ type Brochure = {
   folder: string;
   brand: string;
   description: string;
+  logo: string;
   title: string;
   publicId: string;
   originalBytes: number;
@@ -94,6 +96,7 @@ function describe(file: string, hash: string): Brochure | null {
     folder,
     brand: entry.brand,
     description: entry.description,
+    logo: entry.logo,
     title,
     publicId: `brochures/${slugify(entry.brand)}/${slugify(title)}`,
     originalBytes: statSync(file).size,
@@ -282,30 +285,79 @@ function byBrandThenTitle(a: Brochure, b: Brochure) {
 
 // Built from what Cloudinary holds after the run, so it covers every
 // published brochure, not only the ones this run touched.
+type ManifestBrochure = {
+  title: string;
+  url: string;
+  originalBytes: number;
+  bytes: number;
+  pages?: { first: number; last: number };
+};
+
+type ManifestBrand = {
+  brand: string;
+  description: string;
+  logo: { id: string; url: string };
+  brochures: ManifestBrochure[];
+};
+
+// Logo urls come from the logo script's output, so each brand carries its own.
+function readLogos() {
+  const logos: { id: string; url: string }[] = JSON.parse(readFileSync(LOGOS, "utf8"));
+  return new Map(logos.map(toLogoEntry));
+}
+
+function toLogoEntry(logo: { id: string; url: string }): [string, string] {
+  return [logo.id, logo.url];
+}
+
+// Built from what Cloudinary holds after the run, so it covers every
+// published brochure, not only the ones this run touched. Grouped by brand.
 async function writeManifest() {
   const uploaded = await listUploaded();
-  const entries = [];
+  const logoUrls = readLogos();
+  const brands = new Map<string, ManifestBrand>();
   const missing: string[] = [];
+  const missingLogos = new Set<string>();
+  let count = 0;
+
   for (const brochure of [...published].sort(byBrandThenTitle)) {
     const asset = uploaded.get(brochure.publicId);
     if (!asset) {
       missing.push(brochure.publicId);
       continue;
     }
-    entries.push({
-      brand: brochure.brand,
-      description: brochure.description,
+
+    let group = brands.get(brochure.brand);
+    if (!group) {
+      const logoUrl = logoUrls.get(brochure.logo);
+      if (!logoUrl) missingLogos.add(brochure.logo);
+      group = {
+        brand: brochure.brand,
+        description: brochure.description,
+        logo: { id: brochure.logo, url: logoUrl ?? "" },
+        brochures: [],
+      };
+      brands.set(brochure.brand, group);
+    }
+
+    group.brochures.push({
       title: brochure.title,
       url: asset.url,
       originalBytes: brochure.originalBytes,
       bytes: asset.bytes,
       ...(brochure.pages && { pages: brochure.pages }),
     });
+    count++;
   }
+
+  const manifest = [...brands.values()];
   mkdirSync(join(MANIFEST, ".."), { recursive: true });
-  writeFileSync(MANIFEST, `${JSON.stringify(entries, null, 2)}\n`);
-  console.log(`\nManifest: ${entries.length} brochures → ${relative(process.cwd(), MANIFEST)}`);
+  writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
+  console.log(
+    `\nManifest: ${manifest.length} brands, ${count} brochures → ${relative(process.cwd(), MANIFEST)}`,
+  );
   if (missing.length) console.log(`Not uploaded yet: ${missing.length}`);
+  if (missingLogos.size) console.log("Logo ids not in logos.json:", [...missingLogos]);
 }
 
 if (scanOnly) {
