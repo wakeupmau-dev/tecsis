@@ -54,13 +54,13 @@ export const brochureCatalog: Record<
   "Espectrometros portables de XRF THERMO NITON": {
     brand: "THERMO NITON",
     description: "Espectrómetros portátiles de XRF",
-    // Assumed: Niton is Thermo Scientific's XRF line. To confirm.
+    // Niton is Thermo Scientific's XRF line (confirmed by Tecsis).
     logo: "logos/thermo-scientific",
   },
   "Instrumentos de Laboratorio de alta gama XRF SCIENTIFIC": {
     brand: "XRF SCIENTIFIC",
     description: "Instrumentos de laboratorio de alta gama",
-    // Assumed: same company as the "xrf technology" logo. To confirm.
+    // Same company as the "xrf technology" logo (confirmed by Tecsis).
     logo: "logos/xrf-technology",
   },
   "Sonometros CRYSOUND": {

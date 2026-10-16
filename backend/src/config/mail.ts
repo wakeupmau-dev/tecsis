@@ -8,9 +8,9 @@ export function mailFrom() {
   return process.env.MAIL_FROM ?? "Tecsis <onboarding@resend.dev>";
 }
 
-// Where replies go. Optional: without it, replies go to MAIL_FROM.
+// Where replies go: Tecsis's sales inbox unless REPLY_TO overrides it.
 export function replyTo() {
-  return process.env.REPLY_TO || undefined;
+  return process.env.REPLY_TO || "comercial@tecsis.cl";
 }
 
 export function productsUrl() {
