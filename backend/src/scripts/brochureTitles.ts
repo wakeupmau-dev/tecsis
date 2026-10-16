@@ -18,7 +18,7 @@ export const brochureTitles: Record<string, string> = {
   "brochures/bruel-kjaer/b-k-2245-con-noise-partner": "Sonómetro B&K 2245 con Noise Partner BZ-7300 (bp2611)",
   // B&K 2245 con Work Noise Partner.pdf
   "brochures/bruel-kjaer/b-k-2245-con-work-noise-partner": "Sonómetro B&K 2245 con Work Noise Partner BZ-7302 (bp2619)",
-  // REVIEW hidrofonos.pdf
+  // hidrofonos.pdf
   "brochures/bruel-kjaer/hidrofonos": "hidrofonos",
   // Impact Hammers B&K.pdf
   "brochures/bruel-kjaer/impact-hammers-b-k": "Heavy-duty Impact Hammers Types 8207, 8208 and 8210 (bp2079)",
@@ -38,9 +38,9 @@ export const brochureTitles: Record<string, string> = {
   // DDS-DIC-PRS-ILLUM-HW-EN-V2.pdf
   "brochures/dantec-dynamics/dds-dic-prs-illum-hw-en-v2": "XR/XB-LED Illumination System SXR/SXB-LED Illumination System X-Illumination Controller",
   // ELECTRON
-  // REVIEW Electron Products Portfolio-English_REV1_2023.pdf
+  // Electron Products Portfolio-English_REV1_2023.pdf
   "brochures/electron/electron-products-portfolio-english-rev1-2023": "Electron Products Portfolio-English REV1 2023",
-  // REVIEW Folleto ELECTRON.pdf
+  // Folleto ELECTRON.pdf
   "brochures/electron/folleto-electron": "Folleto ELECTRON",
   // HAEFELY
   // 2293_-_Automatic_Transformer_Winding_Analyser_-_HAEFELY_-__Datasheet_V2002.pdf
@@ -64,7 +64,7 @@ export const brochureTitles: Record<string, string> = {
   // CALIBRADOR_RIC_422_PDF.pdf
   "brochures/haefely/calibrador-ric-422-pdf": "RIC 422",
   // DDX9121b-Brochure.pdf
-  "brochures/haefely/ddx9121b-brochure": "DDX 9121b",
+  "brochures/haefely/ddx9121b-brochure": "DDX 9121b Leaflet",
   // REVIEW DDX9160-9161-Partial_Discharge_PD_Radio_Interference_Voltage_RIV_Detector-HAEFELY-Brochure_V2408_01.pdf
   "brochures/haefely/ddx9160-9161-partial-discharge-pd-radio-interference-voltage-riv-detector-haefely-brochure-v2408-01": "DDX 9160/9161",
   // DDX9160_-_Partial_Discharge__PD____Radio_Interference_Voltage__RIV__Detector_-_HAEFELY_-_Datasheet_-_V2312_01.pdf
@@ -86,7 +86,7 @@ export const brochureTitles: Record<string, string> = {
   // HAEFELY_AKV9310.pdf
   "brochures/haefely/haefely-akv9310": "AKV 9310",
   // HAEFELY_DDX-9121b.pdf
-  "brochures/haefely/haefely-ddx-9121b": "DDX 9121b",
+  "brochures/haefely/haefely-ddx-9121b": "DDX 9121b Datasheet",
   // HAEFELY_FRA5310_DS_0817_SPEC.pdf
   "brochures/haefely/haefely-fra5310-ds-0817-spec": "FRA 5310",
   // HAEFELY_KAL 9510.pdf
@@ -122,8 +122,8 @@ export const brochureTitles: Record<string, string> = {
   // REVIEW TTR279X HAEFELY Brochure.pdf
   "brochures/haefely/ttr279x-haefely-brochure": "TTR 2795 TTR 2796",
   // HIGHTEST
-  // REVIEW New Catalogue 2026.pdf
-  "brochures/hightest/new-catalogue-2026": "General Catalogue 2022",
+  // New Catalogue 2026.pdf
+  "brochures/hightest/new-catalogue-2026": "General Catalogue 2026",
   // HIPOTRONICS
   // 3695.pdf
   "brochures/hipotronics/3695": "3695",
@@ -139,9 +139,9 @@ export const brochureTitles: Record<string, string> = {
   "brochures/hipotronics/800pl-hd-2019": "800PL-HD Series",
   // HIPO_8000PL_SPEC.pdf
   "brochures/hipotronics/hipo-8000pl-spec": "8000 PL Series",
-  // REVIEW HIPO_800PL-HD_DS.pdf
+  // HIPO_800PL-HD_DS.pdf
   "brochures/hipotronics/hipo-800pl-hd-ds": "800PL-HD Series",
-  // REVIEW HIPO_800PL-HD_DS_2020.pdf
+  // HIPO_800PL-HD_DS_2020.pdf
   "brochures/hipotronics/hipo-800pl-hd-ds-2020": "800PL-HD Series",
   // HIPO_8175PL_DS_SPEC.pdf
   "brochures/hipotronics/hipo-8175pl-ds-spec": "8175 PL Series",
@@ -170,21 +170,21 @@ export const brochureTitles: Record<string, string> = {
   // X-WAVE.pdf
   "brochures/hipotronics/x-wave": "Sectionalizing Primary Cable Fault Locator",
   // LIGHTIGO
-  // REVIEW AN_Lithium.pdf
+  // AN_Lithium.pdf
   "brochures/lightigo/an-lithium": "AN Lithium",
   // DS_FireFly_web.pdf
   "brochures/lightigo/ds-firefly-web": "FireFly",
   // FireFly Gold Measurement.pdf
-  "brochures/lightigo/firefly-gold-measurement": "FireFly",
-  // REVIEW mining_v1.3-Spanish.pdf
-  "brochures/lightigo/mining-v1-3-spanish": "Análysis elemental rápido para la indsutria minera",
+  "brochures/lightigo/firefly-gold-measurement": "FireFly Gold Measurement",
+  // mining_v1.3-Spanish.pdf
+  "brochures/lightigo/mining-v1-3-spanish": "Análisis elemental rápido para la industria minera",
   // POWERSIDE
   // DriveScan-MV-Drive-Smart-Mining-Brochure.pdf
   "brochures/powerside/drivescan-mv-drive-smart-mining-brochure": "Why Remote Monitoring of Variable Frequency Drives aligns so well with Smart Mining objectives",
   // PQube Spanish Brochure.pdf
   "brochures/powerside/pqube-spanish-brochure": "Descubra PQube 3",
-  // REVIEW PQView 1 page info (Spanish).pdf
-  "brochures/powerside/pqview-1-page-info-spanish": "El software líder para la gestióny análisis de calidad de energía concentrador de datos monitoreo administración de usuarios análisis detallado reportes",
+  // PQView 1 page info (Spanish).pdf
+  "brochures/powerside/pqview-1-page-info-spanish": "PQView: software para la gestión y análisis de calidad de energía",
   // PQView Brochure.pdf
   "brochures/powerside/pqview-brochure": "PQView",
   // Qubescan Brochure.pdf
@@ -192,10 +192,10 @@ export const brochureTitles: Record<string, string> = {
   // Todos los Productos de Powerside.pdf
   "brochures/powerside/todos-los-productos-de-powerside": "Conozca Nuestro Portafolio de Monitoreo y Corrección de Calidad de Energía",
   // PRIDE
-  // REVIEW 1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的.pdf
+  // 1SHENZHEN PRIDE CATALOG 2027-INSTRUMENTS转曲的.pdf
   "brochures/pride/1shenzhen-pride-catalog-2027-instruments": "1SHENZHEN Pride Catalog 2027-INSTRUMENTS转曲的",
   // REROS
-  // REVIEW Reros UPS Catalog.pdf
+  // Reros UPS Catalog.pdf
   "brochures/reros/reros-ups-catalog": "Reros UPS Catalog",
   // THERMO NITON
   // AutoCatalyticConverter-AppNote.pdf

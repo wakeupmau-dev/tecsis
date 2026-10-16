@@ -252,32 +252,18 @@
         "bytes": 285329
       },
       {
-        "title": "AKV 9310",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112629/brochures/haefely/haefely-akv9310.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112629/brochures/haefely/haefely-akv9310.jpg",
-        "originalBytes": 609702,
-        "bytes": 278713
-      },
-      {
-        "title": "DDX 9121b",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112605/brochures/haefely/ddx9121b-brochure.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112605/brochures/haefely/ddx9121b-brochure.jpg",
-        "originalBytes": 5167754,
-        "bytes": 770123
-      },
-      {
-        "title": "DDX 9121b",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112619/brochures/haefely/haefely-160407-press-release-ddx-9121b-ds2-spec.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112619/brochures/haefely/haefely-160407-press-release-ddx-9121b-ds2-spec.jpg",
-        "originalBytes": 923695,
-        "bytes": 923695
-      },
-      {
-        "title": "DDX 9121b",
+        "title": "DDX 9121b Datasheet",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112631/brochures/haefely/haefely-ddx-9121b.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112631/brochures/haefely/haefely-ddx-9121b.jpg",
         "originalBytes": 1386767,
         "bytes": 846890
+      },
+      {
+        "title": "DDX 9121b Leaflet",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112605/brochures/haefely/ddx9121b-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112605/brochures/haefely/ddx9121b-brochure.jpg",
+        "originalBytes": 5167754,
+        "bytes": 770123
       },
       {
         "title": "DDX 9160",
@@ -313,20 +299,6 @@
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112651/brochures/haefely/idas-2823-highest-precision-tan-d-power-factor-measuring-instrument-haefely-brochure-v2020-11.jpg",
         "originalBytes": 3167532,
         "bytes": 980931
-      },
-      {
-        "title": "KAL 9510",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112628/brochures/haefely/haefely-9510-kal.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112628/brochures/haefely/haefely-9510-kal.jpg",
-        "originalBytes": 653474,
-        "bytes": 285146
-      },
-      {
-        "title": "KAL 9510",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112634/brochures/haefely/haefely-kal-9510.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112634/brochures/haefely/haefely-kal-9510.jpg",
-        "originalBytes": 355183,
-        "bytes": 355183
       },
       {
         "title": "KAL 9510",
@@ -372,13 +344,6 @@
       },
       {
         "title": "MIDAS micro2883",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112656/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-haefely.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112656/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-haefely.jpg",
-        "originalBytes": 943782,
-        "bytes": 525333
-      },
-      {
-        "title": "MIDAS micro2883",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112657/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-analysing-system-haefely-datasheet-v2207.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112657/brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-analysing-system-haefely-datasheet-v2207.jpg",
         "originalBytes": 725715,
@@ -404,13 +369,6 @@
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112641/brochures/haefely/haefely-rskf-application-note.jpg",
         "originalBytes": 26429855,
         "bytes": 665115
-      },
-      {
-        "title": "RSKF",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112645/brochures/haefely/haefely-rskf-spec.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112645/brochures/haefely/haefely-rskf-spec.jpg",
-        "originalBytes": 26420485,
-        "bytes": 665345
       },
       {
         "title": "RVM 5462b",
@@ -452,7 +410,7 @@
     },
     "brochures": [
       {
-        "title": "General Catalogue 2022",
+        "title": "General Catalogue 2026",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112308/brochures/hightest/new-catalogue-2026.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112308/brochures/hightest/new-catalogue-2026.jpg",
         "originalBytes": 2081000,
@@ -485,13 +443,6 @@
       },
       {
         "title": "700-DI Series AC Dielectric Test Sets",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112491/brochures/hipotronics/700-di-ds-2019-06.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112491/brochures/hipotronics/700-di-ds-2019-06.jpg",
-        "originalBytes": 472811,
-        "bytes": 472811
-      },
-      {
-        "title": "700-DI Series AC Dielectric Test Sets",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112492/brochures/hipotronics/700-di-ds-2020-02.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112492/brochures/hipotronics/700-di-ds-2020-02.jpg",
         "originalBytes": 228895,
@@ -513,24 +464,10 @@
       },
       {
         "title": "800PL-HD Series",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112494/brochures/hipotronics/800pl-hd-2019.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112494/brochures/hipotronics/800pl-hd-2019.jpg",
-        "originalBytes": 226557,
-        "bytes": 226557
-      },
-      {
-        "title": "800PL-HD Series",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112499/brochures/hipotronics/hipo-800pl-hd-ds.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112499/brochures/hipotronics/hipo-800pl-hd-ds.jpg",
         "originalBytes": 321221,
         "bytes": 230594
-      },
-      {
-        "title": "800PL-HD Series",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112500/brochures/hipotronics/hipo-800pl-hd-ds-2020.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112500/brochures/hipotronics/hipo-800pl-hd-ds-2020.jpg",
-        "originalBytes": 175233,
-        "bytes": 175233
       },
       {
         "title": "8175 PL Series",
@@ -603,13 +540,6 @@
         "bytes": 148987
       },
       {
-        "title": "KVM-W Series",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112512/brochures/hipotronics/kvm-w-ds-2019.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112512/brochures/hipotronics/kvm-w-ds-2019.jpg",
-        "originalBytes": 2616428,
-        "bytes": 491433
-      },
-      {
         "title": "Sectionalizing Primary Cable Fault Locator",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112516/brochures/hipotronics/x-wave.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112516/brochures/hipotronics/x-wave.jpg",
@@ -642,7 +572,7 @@
         "bytes": 304643
       },
       {
-        "title": "Análysis elemental rápido para la indsutria minera",
+        "title": "Análisis elemental rápido para la industria minera",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111637/brochures/lightigo/mining-v1-3-spanish.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111637/brochures/lightigo/mining-v1-3-spanish.jpg",
         "originalBytes": 1328202,
@@ -656,7 +586,7 @@
         "bytes": 202597
       },
       {
-        "title": "FireFly",
+        "title": "FireFly Gold Measurement",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792111634/brochures/lightigo/firefly-gold-measurement.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111634/brochures/lightigo/firefly-gold-measurement.jpg",
         "originalBytes": 373593,
@@ -688,18 +618,18 @@
         "bytes": 807566
       },
       {
-        "title": "El software líder para la gestióny análisis de calidad de energía concentrador de datos monitoreo administración de usuarios análisis detallado reportes",
-        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112559/brochures/powerside/pqview-1-page-info-spanish.pdf",
-        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112559/brochures/powerside/pqview-1-page-info-spanish.jpg",
-        "originalBytes": 1496134,
-        "bytes": 136166
-      },
-      {
         "title": "PQView",
         "url": "https://res.cloudinary.com/maulight/image/upload/v1792112565/brochures/powerside/pqview-brochure.pdf",
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112565/brochures/powerside/pqview-brochure.jpg",
         "originalBytes": 461114,
         "bytes": 126291
+      },
+      {
+        "title": "PQView: software para la gestión y análisis de calidad de energía",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792112559/brochures/powerside/pqview-1-page-info-spanish.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112559/brochures/powerside/pqview-1-page-info-spanish.jpg",
+        "originalBytes": 1496134,
+        "bytes": 136166
       },
       {
         "title": "QubeScan",

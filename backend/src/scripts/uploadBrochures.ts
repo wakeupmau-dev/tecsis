@@ -49,9 +49,21 @@ const SPLITS = new Map([["brochures/pride/1shenzhen-pride-catalog-2027-instrumen
 const SKIP = new Set([
   "brochures/pride/pride-r",
   "brochures/pride/pride-iso-certificate",
-  // A price quote and a letter to representatives, not brochures. To confirm.
+  // A price quote and a letter to representatives, not brochures (confirmed).
   "brochures/hipotronics/32061209-mta-150-61209",
   "brochures/hipotronics/700-di-letter-to-representatives",
+  // Older versions of a sheet that has a newer file in the folder. Tecsis asked
+  // to show only the most recent.
+  "brochures/haefely/haefely-kal-9510", // 2017; newest is the V2004 datasheet
+  "brochures/haefely/haefely-9510-kal", // 2018
+  "brochures/haefely/haefely-160407-press-release-ddx-9121b-ds2-spec", // 2016; newer: HAEFELY_DDX-9121b
+  "brochures/haefely/haefely-rskf-spec", // same content as the Application Note, older edit
+  "brochures/haefely/haefely-akv9310", // 2016; newer: AKV_9310 Datasheet (2020)
+  "brochures/haefely/midas-micro-2883-mobile-insulation-diagnosis-haefely", // 2020; newer: V2207
+  "brochures/hipotronics/800pl-hd-2019", // newest: HIPO_800PL-HD_DS (2023)
+  "brochures/hipotronics/hipo-800pl-hd-ds-2020",
+  "brochures/hipotronics/700-di-ds-2019-06", // newer: 2020_02
+  "brochures/hipotronics/kvm-w-ds-2019", // newer: 2021_11
 ]);
 
 function collectPdfs(dir: string): string[] {
