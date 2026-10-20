@@ -25,6 +25,7 @@ const LOGOS: Record<string, string> = {
   "XRFTVIC-Logo-.jpg": "xrf-technology",
   "logo-reftek-black.png": "reftek",
   "powerside_white.png": "powerside",
+  "ECT.png": "ect"
 };
 
 // How each logo's white background is made transparent. By default the

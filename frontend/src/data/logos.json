@@ -62,5 +62,9 @@
   {
     "id": "logos/powerside",
     "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118017/logos/powerside"
+  },
+  {
+    "id": "logos/ect",
+    "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792457904/logos/ect"
   }
 ]
