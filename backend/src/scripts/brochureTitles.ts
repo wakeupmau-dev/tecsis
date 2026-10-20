@@ -229,4 +229,60 @@ export const brochureTitles: Record<string, string> = {
   "brochures/xrf-scientific/xrf-24003-fl-a4-6seiter-machines-xrfuse6-en-final-web": "XrFuse 6 ELECTRIC FUSION MACHINE",
   // REVIEW xrTGA-1100-brochure.pdf
   "brochures/xrf-scientific/xrtga-1100-brochure": "Thermogravimetric Analysis",
+  // BKVIBRO
+  // BAN0093-EN-11-BKV-Beyond-at-NSK-Kielce-Plant.pdf
+  "brochures/bkvibro/ban0093-en-11-bkv-beyond-at-nsk-kielce-plant": "BKV Beyond at the NSK Kielce Plant (Application Note)",
+  // BKV-039-BKV_GO.pdf
+  "brochures/bkvibro/bkv-039-bkv-go": "BKV Go: Entry-level Vibration Monitoring",
+  // BKV-Go-Solution_ProductSpecs-OrderInfo_C108403002_en_v02.pdf
+  "brochures/bkvibro/bkv-go-solution-productspecs-orderinfo-c108403002-en-v02": "BKV Go Solution: Product Specifications",
+  // REVIEW BKV_008_Beyond_Brochure_Creation_A4_DIGITAL_AW.pdf
+  "brochures/bkvibro/bkv-008-beyond-brochure-creation-a4-digital-aw": "BKV Beyond: Asset Health Management",
+  // BKVWireless Sensor Solution.pdf
+  "brochures/bkvibro/bkvwireless-sensor-solution": "BKV Wireless Sensor Solution",
+  // REVIEW Intro to SETPOINT - General (including PI-Vision)_ESP.pdf
+  "brochures/bkvibro/intro-to-setpoint-general-including-pi-vision-esp": "Introducción a SETPOINT",
+  // REVIEW SETPOINT_Brochure_Spanish_web.pdf
+  "brochures/bkvibro/setpoint-brochure-spanish-web": "Folleto SETPOINT",
+  // SETPOINT_CMS_2024_R2_Visualization_ProductSpecs-OrderInfo_S000028002_en_v04.pdf
+  "brochures/bkvibro/setpoint-cms-2024-r2-visualization-productspecs-orderinfo-s000028002-en-v04": "SETPOINT CMS Visualization: Product Specifications",
+  // Setpoint_PI System.pdf
+  "brochures/bkvibro/setpoint-pi-system": "Online Vibration Monitoring with the PI System",
+  // VC-8000 machine protection brochure.pdf
+  "brochures/bkvibro/vc-8000-machine-protection-brochure": "VC-8000 Monitoring System & SETPOINT CMS",
+  // VC-8000-Machinery-Protection-System_Spec_S1077785002_en_v08.pdf
+  "brochures/bkvibro/vc-8000-machinery-protection-system-spec-s1077785002-en-v08": "VC-8000: Product Specifications",
+  // CRYSOUND
+  // CRY2626G Datasheet.pdf
+  "brochures/crysound/cry2626g-datasheet": "CRY2626G Drone-mounted Acoustic Imaging Camera",
+  // CRY8024 Pocket Acoustic Camera Datasheet.pdf
+  "brochures/crysound/cry8024-pocket-acoustic-camera-datasheet": "CRY8024 Pocket Acoustic Imaging Camera",
+  // CRY8025 Pocket Pro Acoustic Camera Datasheet.pdf
+  "brochures/crysound/cry8025-pocket-pro-acoustic-camera-datasheet": "CRY8025 Pocket Pro Acoustic Imaging Camera",
+  // CRY8125 ATEX_Datasheet.pdf
+  "brochures/crysound/cry8125-atex-datasheet": "CRY8125 Ex Acoustic Imaging Camera (ATEX + IECEx)",
+  // Hoja Técnica de CRY8124.pdf
+  "brochures/crysound/hoja-tecnica-de-cry8124": "Hoja técnica CRY8124",
+  // ECT
+  // ECT Advantages and Benefits.pdf
+  "brochures/ect/ect-advantages-and-benefits": "Turbomachinery Control Systems: Advantages and Benefits",
+  // ECT Corporate Profile Brochure.pdf
+  "brochures/ect/ect-corporate-profile-brochure": "ECT Corporate Profile",
+  // REVIEW Gastech2015_Day-4.pdf
+  "brochures/ect/gastech2015-day-4": "Gastech 2015 Conference Newspaper",
+  // REVIEW LNG_Jan_2016.pdf
+  "brochures/ect/lng-jan-2016": "Turbomachinery Control for Small-scale LNG (LNG Industry, Jan 2016)",
+  // MOSER GLASER
+  // MGC DURESCA Transformer Bushings IEC-IEEE DTOX(S) RIP-RIS.pdf
+  "brochures/moser-glaser/mgc-duresca-transformer-bushings-iec-ieee-dtox-s-rip-ris": "DURESCA DTOX(S) Condenser Bushings 72.5–550 kV",
+  // MGC Retrofits.pdf
+  "brochures/moser-glaser/mgc-retrofits": "Retrofit Bushings",
+  // MGC_180122_DURESCA_Barras de bus_ES.pdf
+  "brochures/moser-glaser/mgc-180122-duresca-barras-de-bus-es": "DURESCA Sistemas de barras de bus",
+  // REVIEW MGC_180122_DURESCA_Stromschienen-e_WEB.pdf
+  "brochures/moser-glaser/mgc-180122-duresca-stromschienen-e-web": "DURESCA Busbar Systems",
+  // MGC_DTO RIS Brochure.pdf
+  "brochures/moser-glaser/mgc-dto-ris-brochure": "DURESCA RIS Bushings",
+  // MGC_Expertise_Version201804_WEB_18-04 -SP-Rev2 (1).pdf
+  "brochures/moser-glaser/mgc-expertise-version201804-web-18-04-sp-rev2-1": "Moser Glaser Expertise",
 };

@@ -1,5 +1,93 @@
 [
   {
+    "brand": "BKVIBRO",
+    "slug": "bkvibro",
+    "description": "Monitoreo y protección de vibraciones",
+    "logo": {
+      "id": "logos/bruel-kjaer-vibro",
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118006/logos/bruel-kjaer-vibro"
+    },
+    "brochures": [
+      {
+        "title": "BKV Beyond at the NSK Kielce Plant (Application Note)",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458301/brochures/bkvibro/ban0093-en-11-bkv-beyond-at-nsk-kielce-plant.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458301/brochures/bkvibro/ban0093-en-11-bkv-beyond-at-nsk-kielce-plant.jpg",
+        "originalBytes": 936193,
+        "bytes": 569161
+      },
+      {
+        "title": "BKV Beyond: Asset Health Management",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458310/brochures/bkvibro/bkv-008-beyond-brochure-creation-a4-digital-aw.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458310/brochures/bkvibro/bkv-008-beyond-brochure-creation-a4-digital-aw.jpg",
+        "originalBytes": 8896163,
+        "bytes": 1336504
+      },
+      {
+        "title": "BKV Go Solution: Product Specifications",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458313/brochures/bkvibro/bkv-go-solution-productspecs-orderinfo-c108403002-en-v02.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458313/brochures/bkvibro/bkv-go-solution-productspecs-orderinfo-c108403002-en-v02.jpg",
+        "originalBytes": 1592051,
+        "bytes": 978172
+      },
+      {
+        "title": "BKV Go: Entry-level Vibration Monitoring",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458311/brochures/bkvibro/bkv-039-bkv-go.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458311/brochures/bkvibro/bkv-039-bkv-go.jpg",
+        "originalBytes": 2387526,
+        "bytes": 475121
+      },
+      {
+        "title": "BKV Wireless Sensor Solution",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458302/brochures/bkvibro/bkvwireless-sensor-solution.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458302/brochures/bkvibro/bkvwireless-sensor-solution.jpg",
+        "originalBytes": 290057,
+        "bytes": 290057
+      },
+      {
+        "title": "Folleto SETPOINT",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458320/brochures/bkvibro/setpoint-brochure-spanish-web.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458320/brochures/bkvibro/setpoint-brochure-spanish-web.jpg",
+        "originalBytes": 698014,
+        "bytes": 698014
+      },
+      {
+        "title": "Introducción a SETPOINT",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458317/brochures/bkvibro/intro-to-setpoint-general-including-pi-vision-esp.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458317/brochures/bkvibro/intro-to-setpoint-general-including-pi-vision-esp.jpg",
+        "originalBytes": 4592241,
+        "bytes": 3561542
+      },
+      {
+        "title": "Online Vibration Monitoring with the PI System",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458321/brochures/bkvibro/setpoint-pi-system.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458321/brochures/bkvibro/setpoint-pi-system.jpg",
+        "originalBytes": 1034116,
+        "bytes": 129051
+      },
+      {
+        "title": "SETPOINT CMS Visualization: Product Specifications",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458315/brochures/bkvibro/setpoint-cms-2024-r2-visualization-productspecs-orderinfo-s000028002-en-v04.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458315/brochures/bkvibro/setpoint-cms-2024-r2-visualization-productspecs-orderinfo-s000028002-en-v04.jpg",
+        "originalBytes": 2427535,
+        "bytes": 885205
+      },
+      {
+        "title": "VC-8000 Monitoring System & SETPOINT CMS",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458324/brochures/bkvibro/vc-8000-machine-protection-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458324/brochures/bkvibro/vc-8000-machine-protection-brochure.jpg",
+        "originalBytes": 2246072,
+        "bytes": 751328
+      },
+      {
+        "title": "VC-8000: Product Specifications",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458327/brochures/bkvibro/vc-8000-machinery-protection-system-spec-s1077785002-en-v08.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458327/brochures/bkvibro/vc-8000-machinery-protection-system-spec-s1077785002-en-v08.jpg",
+        "originalBytes": 3038574,
+        "bytes": 1992245
+      }
+    ]
+  },
+  {
     "brand": "BRUEL&KJAER",
     "slug": "bruel-kjaer",
     "description": "Equipos para mediciones acústicas",
@@ -102,6 +190,52 @@
     ]
   },
   {
+    "brand": "CRYSOUND",
+    "slug": "crysound",
+    "description": "Cámaras acústicas y termográficas",
+    "logo": {
+      "id": "logos/crysound",
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118007/logos/crysound"
+    },
+    "brochures": [
+      {
+        "title": "CRY2626G Drone-mounted Acoustic Imaging Camera",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458280/brochures/crysound/cry2626g-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458280/brochures/crysound/cry2626g-datasheet.jpg",
+        "originalBytes": 3538227,
+        "bytes": 2171934
+      },
+      {
+        "title": "CRY8024 Pocket Acoustic Imaging Camera",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458283/brochures/crysound/cry8024-pocket-acoustic-camera-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458283/brochures/crysound/cry8024-pocket-acoustic-camera-datasheet.jpg",
+        "originalBytes": 2726225,
+        "bytes": 1690546
+      },
+      {
+        "title": "CRY8025 Pocket Pro Acoustic Imaging Camera",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458287/brochures/crysound/cry8025-pocket-pro-acoustic-camera-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458287/brochures/crysound/cry8025-pocket-pro-acoustic-camera-datasheet.jpg",
+        "originalBytes": 3005161,
+        "bytes": 1749795
+      },
+      {
+        "title": "CRY8125 Ex Acoustic Imaging Camera (ATEX + IECEx)",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458278/brochures/crysound/cry8125-atex-datasheet.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458278/brochures/crysound/cry8125-atex-datasheet.jpg",
+        "originalBytes": 3750573,
+        "bytes": 1864479
+      },
+      {
+        "title": "Hoja técnica CRY8124",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458282/brochures/crysound/hoja-tecnica-de-cry8124.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458282/brochures/crysound/hoja-tecnica-de-cry8124.jpg",
+        "originalBytes": 1040423,
+        "bytes": 701657
+      }
+    ]
+  },
+  {
     "brand": "DANTEC DYNAMICS",
     "slug": "dantec-dynamics",
     "description": "Equipos láser para análisis de mecánica de fluidos",
@@ -130,6 +264,45 @@
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792112315/brochures/dantec-dynamics/dds-dic-prs-illum-hw-en-v2.jpg",
         "originalBytes": 4823274,
         "bytes": 4510476
+      }
+    ]
+  },
+  {
+    "brand": "ECT",
+    "slug": "ect",
+    "description": "Controles y antisurge",
+    "logo": {
+      "id": "logos/ect",
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792457904/logos/ect"
+    },
+    "brochures": [
+      {
+        "title": "ECT Corporate Profile",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458290/brochures/ect/ect-corporate-profile-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458290/brochures/ect/ect-corporate-profile-brochure.jpg",
+        "originalBytes": 534982,
+        "bytes": 463858
+      },
+      {
+        "title": "Gastech 2015 Conference Newspaper",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458295/brochures/ect/gastech2015-day-4.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458295/brochures/ect/gastech2015-day-4.jpg",
+        "originalBytes": 2960755,
+        "bytes": 2690502
+      },
+      {
+        "title": "Turbomachinery Control for Small-scale LNG (LNG Industry, Jan 2016)",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458299/brochures/ect/lng-jan-2016.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458299/brochures/ect/lng-jan-2016.jpg",
+        "originalBytes": 1762850,
+        "bytes": 282944
+      },
+      {
+        "title": "Turbomachinery Control Systems: Advantages and Benefits",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458289/brochures/ect/ect-advantages-and-benefits.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458289/brochures/ect/ect-advantages-and-benefits.jpg",
+        "originalBytes": 233727,
+        "bytes": 233727
       }
     ]
   },
@@ -591,6 +764,59 @@
         "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792111634/brochures/lightigo/firefly-gold-measurement.jpg",
         "originalBytes": 373593,
         "bytes": 321688
+      }
+    ]
+  },
+  {
+    "brand": "MOSER GLASER",
+    "slug": "moser-glaser",
+    "description": "Bus de barras",
+    "logo": {
+      "id": "logos/moser-glaser",
+      "url": "https://res.cloudinary.com/maulight/image/upload/c_limit,w_2000/e_make_transparent:10/e_trim/c_fit,h_160/f_auto,q_auto/v1792118014/logos/moser-glaser"
+    },
+    "brochures": [
+      {
+        "title": "DURESCA Busbar Systems",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458273/brochures/moser-glaser/mgc-180122-duresca-stromschienen-e-web.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458273/brochures/moser-glaser/mgc-180122-duresca-stromschienen-e-web.jpg",
+        "originalBytes": 3581730,
+        "bytes": 2451696
+      },
+      {
+        "title": "DURESCA DTOX(S) Condenser Bushings 72.5–550 kV",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458268/brochures/moser-glaser/mgc-duresca-transformer-bushings-iec-ieee-dtox-s-rip-ris.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458268/brochures/moser-glaser/mgc-duresca-transformer-bushings-iec-ieee-dtox-s-rip-ris.jpg",
+        "originalBytes": 866008,
+        "bytes": 731270
+      },
+      {
+        "title": "DURESCA RIS Bushings",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458275/brochures/moser-glaser/mgc-dto-ris-brochure.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458275/brochures/moser-glaser/mgc-dto-ris-brochure.jpg",
+        "originalBytes": 213208,
+        "bytes": 159067
+      },
+      {
+        "title": "DURESCA Sistemas de barras de bus",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458271/brochures/moser-glaser/mgc-180122-duresca-barras-de-bus-es.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458271/brochures/moser-glaser/mgc-180122-duresca-barras-de-bus-es.jpg",
+        "originalBytes": 2353274,
+        "bytes": 2209976
+      },
+      {
+        "title": "Moser Glaser Expertise",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458333/brochures/moser-glaser/mgc-expertise-version201804-web-18-04-sp-rev2-1.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458333/brochures/moser-glaser/mgc-expertise-version201804-web-18-04-sp-rev2-1.jpg",
+        "originalBytes": 4142554,
+        "bytes": 3251363
+      },
+      {
+        "title": "Retrofit Bushings",
+        "url": "https://res.cloudinary.com/maulight/image/upload/v1792458270/brochures/moser-glaser/mgc-retrofits.pdf",
+        "cover": "https://res.cloudinary.com/maulight/image/upload/pg_1,w_400,f_auto,q_auto/v1792458270/brochures/moser-glaser/mgc-retrofits.jpg",
+        "originalBytes": 906279,
+        "bytes": 756616
       }
     ]
   },

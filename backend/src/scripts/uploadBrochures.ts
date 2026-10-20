@@ -89,10 +89,16 @@ function slugify(value: string) {
 }
 
 // Matched ignoring case: macOS folders differing only in case are the same
-// folder, so a rename like "ups" → "Ups" may never reach the disk.
+// folder, so a rename like "ups" → "Ups" may never reach the disk. Also
+// NFC-normalized: Finder can store "á" decomposed (a + accent), which would
+// not equal the precomposed "á" typed in the catalog.
+function folderKey(folder: string) {
+  return folder.normalize("NFC").toLowerCase();
+}
+
 const catalogByFolder = new Map(
   Object.entries(brochureCatalog).map(([folder, entry]) => [
-    folder.toLowerCase(),
+    folderKey(folder),
     entry,
   ]),
 );
@@ -103,7 +109,7 @@ function hashFile(file: string) {
 
 function describe(file: string, hash: string): Brochure | null {
   const folder = relative(ROOT, file).split(sep)[0];
-  const entry = catalogByFolder.get(folder.toLowerCase());
+  const entry = catalogByFolder.get(folderKey(folder));
   if (!entry) return null;
 
   // The public id stays derived from the file name, so retitling never

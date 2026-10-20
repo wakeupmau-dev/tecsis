@@ -63,14 +63,29 @@ export const brochureCatalog: Record<
     // Same company as the "xrf technology" logo (confirmed by Tecsis).
     logo: "logos/xrf-technology",
   },
-  "Sonometros CRYSOUND": {
+  "Cámaras acústicas y termográficas CRYSOUND": {
     brand: "CRYSOUND",
-    description: "Sonómetros",
+    description: "Cámaras acústicas y termográficas",
     logo: "logos/crysound",
   },
   "Ups REROS": {
     brand: "REROS",
     description: "UPS",
     logo: "logos/reros",
+  },
+  "Monitoreo y protección vibraciones BKVIBRO": {
+    brand: "BKVIBRO",
+    description: "Monitoreo y protección de vibraciones",
+    logo: "logos/bruel-kjaer-vibro",
+  },
+  "Bus de barras_ MOSER GLASER": {
+    brand: "MOSER GLASER",
+    description: "Bus de barras",
+    logo: "logos/moser-glaser",
+  },
+  "Controles y antisurge ECT": {
+    brand: "ECT",
+    description: "Controles y antisurge",
+    logo: "logos/ect",
   },
 };
